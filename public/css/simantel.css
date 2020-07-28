@@ -1,0 +1,35 @@
+.card{
+    margin-top: 20px;
+}
+.card-body{
+    height: 150px;
+}
+.card-title{
+    margin-bottom: 0;
+}
+.display-4{
+    font-weight: 550;
+}
+.bg-info, .bg-primary,.bg-secondary,.bg-success,.bg-danger,.bg-warning,.bg-dark,.bg-default{
+    margin-left: 20px;
+}
+.bg-primary,.bg-danger,.bg-default{
+    margin-left: 100px;
+}
+.bg-secondary,.bg-warning{
+    margin-left: 100px;
+}
+.baris-2{
+    margin-top: 50px;
+}
+.bg-default{
+    background-color: #008000;
+}
+.card-body-icon{
+    position: absolute;
+    z-index: 0;
+    top:25px;
+    right: 4px;
+    opacity: 0.4;
+    font-size: 90px;
+}
