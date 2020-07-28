@@ -17,16 +17,16 @@
     <div class="sidebar">
     <header>SIMANTEL</header>
       <ul>
-        <li><a href="/"><i class="fas fa-qrcode"></i>Dashboard</a></li>
-        <li><a href="/simantel"><i class="fas fa-calendar-week"></i>Events</a></li>
-        <li><a href="#"><i class="far fa-question-circle"></i>About</a></li>
+        <li><a href="{{url('/')}}"><i class="fas fa-qrcode"></i>Dashboard</a></li>
+        <li><a href="{{url('/simantel')}}"><i class="fas fa-calendar-week"></i>Provider</a></li>
+        <li><a href="#"><i class="far fa-question-circle"></i>Pemilik Tower</a></li>
         <li><a href="#"><i class="fas fa-sliders-h"></i>Services</a></li>
         <li><a href="#"><i class="far fa-envelope"></i>Contact</a></li>
       </ul>
     </div>
 <section>
   <nav>
-   <a class="btn btn-primary" href="/login" role="button">LOGIN</a>
+   <a class="btn btn-primary" href="{{url('/login')}}" role="button">LOGIN</a>
    <form class="form-inline">
       <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
       <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
