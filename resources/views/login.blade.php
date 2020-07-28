@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <title>Login</title>
-        <link rel="stylesheet" href="/css/login.css">
+        <link rel="stylesheet" href="css/login.css">
         <link rel="Login" href="">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
         <script src="https://kit.fontawesome.com/a076d05399.js"></script>
@@ -27,7 +27,7 @@
             <div class="pass">
             <a href="#">Forgot Password</a>
             </div>
-               <a class="btn btn-primary" href="/kecamatanmersam_admin" role="button" >LOGIN</a>
+               <a class="btn btn-primary" href="{{url('/kecamatanmersam_admin')}}" role="button" >LOGIN</a>
         </div>
     </div>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
