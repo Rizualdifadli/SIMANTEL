@@ -22,13 +22,6 @@ form{
   float: right;
   margin-top: 10px;
 }
-.topcontainer{
-  background:#063146 ;
-  width: 102%;
-  height: 71px;
-  margin-top: -24px;
-  top: 0;
-}
 .form-inline{
   margin-top: 10px;
   margin-right: 10px;
@@ -104,7 +97,6 @@ label #btn{
   transition: all .5s;
 }
 label #cancel{
-  position: absolute;
   z-index: 1111;
   left: -195px;
   top: 17px;
