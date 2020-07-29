@@ -33,14 +33,12 @@ form{
   height: 100%;
   background: #042331;
   transition: all .5s ease;
-  position: sticky;
 }
 .fa-angle-double-right{
 margin-top: -10px;
 }
 .fa-times{
   text-align: center;
-  top: 0;
   border-width: 0 0 1px;
 }
 .sidebar{
@@ -117,7 +115,6 @@ label #cancel{
   left: 200px;
   position: fixed;
 }
-
 #check:checked ~ section{
   margin-left: 250px;
 }
