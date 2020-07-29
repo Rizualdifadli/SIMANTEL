@@ -4,7 +4,7 @@
 
 @section("container")
 <link rel="stylesheet" href="css/kecamatan_1.css">
-<h4>{{$region->kecamatan}}</h4>
+<h2 class="text-center">{{$region->kecamatan}}</h2>
 <hr>
 <table class="table table-bordered">
   <thead class="thead-dark">
