@@ -8,12 +8,12 @@
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
   </head>
   <body>
+    <div></div>
     <input type="checkbox" id="check">
     <label for="check">
       <i class="fa fa-angle-double-right" id="btn"></i>
       <i class="fas fa-times" id="cancel"></i>
     </label>
-   
     <div class="sidebar">
     <header>SIMANTEL</header>
       <ul>
