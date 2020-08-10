@@ -9,7 +9,7 @@
 <link rel="stylesheet" href="css/simantel.css">
 <div class="row text-white baris-1">
     @foreach($region as $r)
-    <div class="card bg-info" style="width: 18rem;">
+    <div class="card bg-info" style="width: 18rem;top:35px; ">
      <div class="card-body">
        <div class="card-body-icon"><i class="fas fa-broadcast-tower"></i></div>
       <h5 class="card-title">{{$r->kecamatan}}</h5>
