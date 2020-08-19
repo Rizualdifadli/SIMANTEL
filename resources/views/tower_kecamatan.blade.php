@@ -3,11 +3,11 @@
 @section('title' , $region->kecamatan)
 
 @section("container")
-<link rel="stylesheet" href="css/kecamatan_1.css">
-<h4>&nbsp Kecamatan {{$region->kecamatan}}</h4>
-<hr>
-<table class="table">
-  <thead class="thead-dark">
+<script src="js/tower_kecamatan.js"></script>
+<link rel="stylesheet" href="css/tower_kecamatan.css">
+<h2 class="text-center">{{$region->kecamatan}}</h2>
+<table class="table table-bordered" id="search">
+  <thead class="thead-dark" >
       <th scope="col">TOWER</th>
       <th scope="col">DESA</th>
       <th scope="col">KOORDINAT</th>
@@ -20,14 +20,13 @@
       <th scope="col">PETUGAS</th>
       <th scope="col">HP PETUGAS</th>
       <th scope="col">SHELTER DAN GENSET</th>
-      <th scope="col">PROVIDER</th>
     </thead>
 
   @foreach ($data as $x)
   <tr>
       <td>{{$x->tower_id}}</td>
-      <td>{{$x->desa}}</td>
-      <td>{{$x->koordinat}}</td>
+      <td>{{$x->desa}} </p></td>
+      <td>{{$x->koordinat}}<p><a href="">lihat gambar{{$x->gambar}}</a></td>
       <td>{{$x->ketinggian_meter}}</td>
       <td>{{$x->pemilik_tanah}}</td>
       <td>{{$x->izin_tower}}</td>
@@ -39,6 +38,4 @@
       <td>{{$x->shelter_genset}}</td>
   </tr>
   @endforeach
-
 @endsection
-
