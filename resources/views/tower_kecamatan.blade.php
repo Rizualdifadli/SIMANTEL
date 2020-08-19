@@ -6,7 +6,7 @@
 <script src="js/tower_kecamatan.js"></script>
 <link rel="stylesheet" href="css/tower_kecamatan.css">
 <h2 class="text-center">{{$region->kecamatan}}</h2>
-<table class="table table-bordered" id="search">
+<table class="table table-bordered col-md-12" id="search">
   <thead class="thead-dark" >
       <th scope="col">TOWER</th>
       <th scope="col">DESA</th>
