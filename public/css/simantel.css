@@ -1,5 +1,7 @@
-.card{
+.baris-1 .card{
     margin-top: 20px;
+    margin-left: 20px;
+    top:20px;
 }
 .card-body{
     height: 150px;
@@ -10,20 +12,11 @@
 .display-4{
     font-weight: 550;
 }
-.bg-info, .bg-primary,.bg-secondary,.bg-success,.bg-danger,.bg-warning,.bg-dark,.bg-default{
+.bg-info{
     margin-left: 20px;
 }
-.bg-primary,.bg-danger,.bg-default{
-    margin-left: 100px;
-}
-.bg-secondary,.bg-warning{
-    margin-left: 100px;
-}
-.baris-2{
-    margin-top: 50px;
-}
-.bg-default{
-    background-color: #008000;
+.row {
+    margin-top: 25px;
 }
 .card-body-icon{
     position: absolute;
