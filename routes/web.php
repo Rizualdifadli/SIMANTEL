@@ -40,4 +40,16 @@ Route:: get('/kecamatan_bajubang', 'PagesController@kecamatan_bajubang');
 Route:: get('/kecamatanmersam_admin', 'PagesController@kecamatanmersam_admin');
 Route:: get('/kecamatantembesi_admin', 'PagesController@kecamatantembesi_admin');
 
-// admin
+// admin user management
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+
+
+Route::namespace('Admin')->prefix('admin')->name('admin.')->group(function(){
+	Route::resource('/users','UsersController');
+});
