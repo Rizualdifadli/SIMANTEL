@@ -4,8 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>@yield('title')</title>
-    <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/main.css"><link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
   </head>
   <body>
@@ -26,35 +25,15 @@
       </ul>
     </div>
 <section>
-<nav>
-</nav>
+  <nav>
+   <a class="btn btn-primary" href="{{route('admin.users.index')}}" role="button">LOGIN</a>
+   <form class="form-inline">
+      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+    </form>
+  </nav>
   @yield('container')
 </section>
-<script>
-    const menuBtn = document.querySelector(".menu-icon span");
-    const searchBtn = document.querySelector(".search-icon");
-    const cancelBtn = document.querySelector(".cancel-icon");
-    const items = document.querySelector(".nav-items");
-    const form = document.querySelector("form");
-    menuBtn.onclick = ()=>{
-      items.classList.add("active");
-      menuBtn.classList.add("hide");
-      searchBtn.classList.add("hide");
-      cancelBtn.classList.add("show");
-    }
-    cancelBtn.onclick = ()=>{
-      items.classList.remove("active");
-      menuBtn.classList.remove("hide");
-      searchBtn.classList.remove("hide");
-      cancelBtn.classList.remove("show");
-      form.classList.remove("active");
-      cancelBtn.style.color = "#ff3d00";
-    }
-    searchBtn.onclick = ()=>{
-      form.classList.add("active");
-      searchBtn.classList.add("hide");
-      cancelBtn.classList.add("show");
-    }
-  </script>
+
   </body>
 </html>

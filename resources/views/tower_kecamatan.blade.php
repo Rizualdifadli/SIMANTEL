@@ -4,9 +4,9 @@
 
 @section("container")
 <link rel="stylesheet" href="css/kecamatan_1.css">
-<h2 class="text-center">{{$region->kecamatan}}</h2>
+<h4>&nbsp Kecamatan {{$region->kecamatan}}</h4>
 <hr>
-<table class="table table-bordered">
+<table class="table">
   <thead class="thead-dark">
       <th scope="col">TOWER</th>
       <th scope="col">DESA</th>
@@ -20,6 +20,7 @@
       <th scope="col">PETUGAS</th>
       <th scope="col">HP PETUGAS</th>
       <th scope="col">SHELTER DAN GENSET</th>
+      <th scope="col">PROVIDER</th>
     </thead>
 
   @foreach ($data as $x)

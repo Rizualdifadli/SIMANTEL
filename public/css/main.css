@@ -13,132 +13,18 @@ nav{
   width: 100%;
   height: 71px;
   margin-top: -24px;
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: space-between;
-  height: 70px;
-  padding: 0 100px;
+  top: 0;
+}
+form{
+  float: right;
 }
 .btn{
   float: right;
-  margin-top: 15px;
+  margin-top: 10px;
 }
-.row{
-  width: 100%;
-}
-nav form{
-  display: flex;
-  height: 40px;
-  padding: 2px;
-  background: #1e232b;
-  min-width: 18%!important;
-  width: 250px;
-  margin-top: 15px;
-  float: right;
-  border-radius: 2px;
-  border: 1px solid rgba(155,155,155,0.2);
-}
-nav form .search-data{
-  width: 100%;
-  height: 100%;
-  padding: 0 10px;
-  color: #fff;
-  font-size: 17px;
-  border: none;
-  font-weight: 500;
-  background: none;
-}
-nav form button{
-  padding: 0 15px;
-  color: #fff;
-  font-size: 17px;
-  background: #ff3d00;
-  border: none;
-  border-radius: 2px;
-  cursor: pointer;
-}
-nav form button:hover{
-  background: #e63600;
-}
-nav .menu-icon,
-nav .cancel-icon,
-nav .search-icon{
-  float: right;
-  margin-top: 20px;
-  width: 40px;
-  text-align: center;
-  font-size: 24px;
-  color: #fff;
-  cursor: pointer;
-  display: none;
-}
-nav .menu-icon span,
-nav .cancel-icon,
-nav .search-icon{
-  display: none;
-}
-@media (max-width: 1245px) {
-  nav{
-    padding: 0 50px;
-  }
-}
-@media (max-width: 1140px){
-  nav{
-    padding: 0px;
-  }
-  nav form{
-    position: absolute;
-    top: 80px;
-    right: 50px;
-    opacity: 0;
-    pointer-events: none;
-    transition: top 0.3s ease, opacity 0.1s ease;
-  }
-  nav form.active{
-    top: 60px;
-    opacity: 1;
-    pointer-events: auto;
-  }
-  nav form:before{
-    position: absolute;
-    content: "";
-    top: -13px;
-    right: 0px;
-    width: 0;
-    height: 0;
-    z-index: -1;
-    border: 10px solid transparent;
-    border-bottom-color: #1e232b;
-    margin: -20px 0 0;
-  }
-  nav form:after{
-    position: absolute;
-    content: '';
-    height: 60px;
-    padding: 2px;
-    background: #1e232b;
-    border-radius: 2px;
-    min-width: calc(100% + 20px);
-    z-index: -2;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-  }
-  nav .menu-icon{
-    display: block;
-  }
-  nav .search-icon,
-  nav .menu-icon span{
-    display: block;
-  }
-  nav .menu-icon span.hide,
-  nav .search-icon.hide{
-    display: none;
-  }
-  nav .cancel-icon.show{
-    display: block;
-  }
+.form-inline{
+  margin-top: 10px;
+  margin-right: 10px;
 }
 .sidebar {
   position: fixed;
@@ -232,20 +118,37 @@ label #cancel{
 #check:checked ~ section{
   margin-left: 250px;
 }
-#check:checked ~ nav{
- width: 100%;
-}
 section{
   transition: all .5s;
 }
-@media (max-width: 980px){
-  nav .menu-icon,
-  nav .cancel-icon,
-  nav .search-icon{
-    float: right;
-     margin-top: 20px;
+/* @media(max-width : 860px){
+  .sidebar{
+    height: auto;
+    width: 70px;
+    left: 0;
+    margin: 100px 0;
   }
-  nav form{
-    right: 30px;
+  header,#btn,#cancel{
+    display: none;
   }
-}
+  span{
+    position: absolute;
+    margin-left: 23px;
+    opacity: 0;
+    visibility: hidden;
+  }
+  .sidebar a{
+    height: 60px;
+  }
+  .sidebar a i{
+    margin-left: -10px;
+  }
+  a:hover {
+    width: 200px;
+    background: inherit;
+  }
+  .sidebar a:hover span{
+    opacity: 1;
+    visibility: visible;
+  }
+} */
