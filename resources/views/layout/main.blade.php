@@ -27,20 +27,6 @@
     </div>
 <section>
 <nav>
-<a class="btn btn-primary" href="{{url('/login')}}" role="button">LOGIN</a>
-      <div class="menu-icon">
-      <span></span></div>
-      <div class="nav-items">
-      </div>
-      <div class="search-icon">
-      <span class="fas fa-search"></span></div>
-      <div class="cancel-icon">
-      <span class="fas fa-times"></span></div>
-      <form action="#">
-        <input type="search" class="search-data" placeholder="Search" required>
-        <button type="submit" class="fas fa-search"></button>
-      </form>
-      
 </nav>
   @yield('container')
 </section>
