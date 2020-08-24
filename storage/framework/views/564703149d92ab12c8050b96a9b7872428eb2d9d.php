@@ -7,7 +7,7 @@
             <div class="card">
                 <div class="card-header">Users</div>
                 <div class="card-body">
-                  <a href="<?php echo e(route('admin.users.create')); ?>"><button type="button" class="btn btn-primary float-left">Create</button></a>
+                      <a href="<?php echo e(route('register')); ?>"><button type="button" class="btn btn-primary float-left">Register new user</button></a>
 <table class="table">
   <thead>
     <tr>
