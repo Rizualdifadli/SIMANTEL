@@ -36,11 +36,7 @@ class UsersController extends Controller
      */
     public function create()
     {
-<<<<<<< HEAD
-      
-=======
-      return view('admin.users.create');
->>>>>>> ee893eed34629462cab8dfcc617f3e37a2f0b69a
+
     }
 
     /**
