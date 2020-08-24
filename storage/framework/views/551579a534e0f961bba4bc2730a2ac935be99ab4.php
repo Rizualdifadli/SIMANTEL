@@ -32,7 +32,10 @@
     </div>
 <section>
 <div class="nav">
+  <div class="login">
   <a class="btn btn-primary" href="<?php echo e(route('admin.users.index')); ?>" role="button">LOGIN</a>
+  </div>
+  
 </div>
   <?php echo $__env->yieldContent('container'); ?>
 </section>  
