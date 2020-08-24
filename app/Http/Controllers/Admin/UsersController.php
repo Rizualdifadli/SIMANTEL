@@ -14,7 +14,7 @@ class UsersController extends Controller
     {
         $this->middleware('auth');
     }
-    
+
     /**
      * Display a listing of the resource.
      *
@@ -36,6 +36,7 @@ class UsersController extends Controller
      */
     public function create()
     {
+      
     }
 
     /**

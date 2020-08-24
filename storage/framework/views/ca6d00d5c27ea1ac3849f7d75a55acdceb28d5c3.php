@@ -26,7 +26,7 @@
   <tr>
       <td><?php echo e($x->tower_id); ?></td>
       <td><?php echo e($x->desa); ?> </p></td>
-      <td><?php echo e($x->koordinat); ?><p><a href="">lihat gambar<?php echo e($x->gambar); ?> <img src="<?php echo e(asset('gambar')); ?>" alt=""></a></td>
+      <td><?php echo e($x->koordinat); ?><p><a href="">lihat gambar<?php echo e($x->gambar); ?></a></td>
       <td><?php echo e($x->ketinggian_meter); ?></td>
       <td><?php echo e($x->pemilik_tanah); ?></td>
       <td><?php echo e($x->izin_tower); ?></td>
@@ -40,4 +40,4 @@
   <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
 <?php $__env->stopSection(); ?>
 
-<?php echo $__env->make('layout.main', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH C:\xampp\htdocs\SIMANTEL\resources\views/tower_kecamatan.blade.php ENDPATH**/ ?>
+<?php echo $__env->make('layout.main', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH C:\Users\ASUS\Documents\GitHub\mantel\SIMANTEL\resources\views/tower_kecamatan.blade.php ENDPATH**/ ?>
