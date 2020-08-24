@@ -7,6 +7,7 @@
             <div class="card">
                 <div class="card-header">Users</div>
                 <div class="card-body">
+                  <a href="{{route('admin.users.create',$user->id)}}"><button type="button" class="btn btn-primary float-left">Create</button></a>
 <table class="table">
   <thead>
     <tr>
@@ -18,7 +19,7 @@
     </tr>
   </thead>
   <tbody>
-    @foreach($users as $user)                    
+    @foreach($users as $user)
     <tr>
       <th scope="row">{{$user->id}}</th>
       <td>{{$user->name}}</td>
