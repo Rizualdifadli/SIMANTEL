@@ -15,7 +15,14 @@ h2 {
 .dataTables_info{
     display: none;
 }
-.search_filter{
-    position: absolute;
+#search_filter{
+    margin-top: -129px;
+    margin-right: 90px;
     float: right;
+    right: 50px;
+}
+.form-control{
+    height: 35px;
+    width: 180px;
+
 }

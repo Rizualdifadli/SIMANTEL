@@ -24,7 +24,7 @@
         <li><a href="#"><i class="far fa-envelope"></i>Contact</a></li>
       </ul>
     </div>
-<section>
+<section >
 <div class="nav">
   <div class="login">
   <a class="btn btn-primary" href="{{route('admin.users.index')}}" role="button">LOGIN</a>
@@ -34,7 +34,7 @@
   @yield('container')
 </section>  
 <script src="https://kit.fontawesome.com/a076d05399.js"></script>
-    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script src="js/search.js"></script>
     <script src="https://cdn.datatables.net/1.10.21/js/jquery.dataTables.min.js"></script>
     <script src="js/main.js"></script>
     <script src="js/tower_kecamatan.js"></script> 
