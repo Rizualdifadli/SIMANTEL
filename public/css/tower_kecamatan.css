@@ -9,3 +9,13 @@ h2 {
 #search{
     position: static;
 }
+.dataTables_length{
+      display: none;
+}
+.dataTables_info{
+    display: none;
+}
+.search_filter{
+    position: absolute;
+    float: right;
+}

@@ -38,6 +38,7 @@ body {
 }
 .fa-angle-double-right{
 margin-top: -10px;
+margin-left: -10px;
 }
 .fa-times{
   text-align: center;
@@ -118,6 +119,9 @@ label #cancel{
   position: fixed;
 }
 #check:checked ~ section{
+  margin-left: 250px;
+}
+#check:checked ~ #search{
   margin-left: 250px;
 }
 section{
