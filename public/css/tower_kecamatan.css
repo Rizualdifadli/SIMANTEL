@@ -31,3 +31,8 @@ h2 {
     height: 35px;
     width: 180px;
 }
+
+.dataTables_filter #text {
+    display: none;
+    color: blanchedalmond;
+}
