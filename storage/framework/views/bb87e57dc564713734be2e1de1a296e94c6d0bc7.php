@@ -6,12 +6,6 @@
     <title><?php echo $__env->yieldContent('title'); ?></title>
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
-    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
-    <script src="https://cdn.datatables.net/1.10.21/js/jquery.dataTables.min.js"></script>
-    <script src="https://cdn.datatables.net/1.10.21/js/dataTables.bootstrap4.min.js"></script>
-    <script src="js/main.js"></script>
-    <script src="js/tower_kecamatan.js"></script> 
   </head>
   <body>
     <div></div>
@@ -30,7 +24,7 @@
         <li><a href="#"><i class="far fa-envelope"></i>Contact</a></li>
       </ul>
     </div>
-<section>
+<section >
 <div class="nav">
   <div class="login">
   <a class="btn btn-primary" href="<?php echo e(route('admin.users.index')); ?>" role="button">LOGIN</a>
@@ -39,6 +33,11 @@
 </div>
   <?php echo $__env->yieldContent('container'); ?>
 </section>  
+<script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <script src="js/search.js"></script>
+    <script src="https://cdn.datatables.net/1.10.21/js/jquery.dataTables.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/tower_kecamatan.js"></script> 
   </body>
 </html>
 <?php /**PATH C:\Users\ASUS\Documents\GitHub\mantel\SIMANTEL\resources\views/layout/main.blade.php ENDPATH**/ ?>
