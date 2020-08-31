@@ -25,14 +25,17 @@
       <td><?php echo e($user->name); ?></td>
       <td><?php echo e($user->updated_at); ?></td>
       <td><?php echo e(implode(',', $user->roles()->get()->pluck('name')->toArray())); ?></td>
-      <td>
+      <td><?php if (app(\Illuminate\Contracts\Auth\Access\Gate::class)->check('edit-users')): ?>
         <a href="<?php echo e(route('admin.users.edit',$user->id)); ?>"><button type="button" class="btn btn-primary float-left">Edit</button></a>
+        <?php endif; ?>
+        <?php if (app(\Illuminate\Contracts\Auth\Access\Gate::class)->check('delete-users')): ?>
         <form action="<?php echo e(route('admin.users.destroy',$user)); ?>"method="POST" class="float-left">
             <?php echo csrf_field(); ?>
             <?php echo e(method_field('DELETE')); ?>
 
             <button type="submit" class="btn btn-warning">Delete</button>
         </form>
+        <?php endif; ?>
     </td>
     </tr>
     <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
