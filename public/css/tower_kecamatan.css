@@ -3,9 +3,36 @@ h2 {
     border-style: solid;
     border-bottom-width: 3px;
 }
-.row{
+
+.row {
     display: flex;
 }
-#search{
+
+#search {
     position: static;
+}
+
+.dataTables_length {
+    display: none;
+}
+
+.dataTables_info {
+    display: none;
+}
+
+#search_filter {
+    margin-top: -129px;
+    margin-right: 90px;
+    float: right;
+    right: 50px;
+}
+
+.form-control {
+    height: 35px;
+    width: 180px;
+}
+
+.dataTables_filter #text {
+    display: none;
+    color: blanchedalmond;
 }

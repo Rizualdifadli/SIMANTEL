@@ -26,7 +26,7 @@
   <tr>
       <td>{{$x->tower_id}}</td>
       <td>{{$x->desa}} </p></td>
-      <td>{{$x->koordinat}}<p><a href="">lihat gambar{{$x->gambar}} <img src="{{asset('gambar')}}" alt=""></a></td>
+      <td>{{$x->koordinat}}<p><a href="">lihat gambar{{$x->gambar}}</a></td>
       <td>{{$x->ketinggian_meter}}</td>
       <td>{{$x->pemilik_tanah}}</td>
       <td>{{$x->izin_tower}}</td>
