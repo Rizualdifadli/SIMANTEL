@@ -7,6 +7,7 @@
             <div class="card">
                 <div class="card-header">Users</div>
                 <div class="card-body">
+                      <a href="<?php echo e(route('register')); ?>"><button type="button" class="btn btn-primary float-left">Register new user</button></a>
 <table class="table">
   <thead>
     <tr>
@@ -18,7 +19,7 @@
     </tr>
   </thead>
   <tbody>
-    <?php $__currentLoopData = $users; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $user): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>                    
+    <?php $__currentLoopData = $users; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $user): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
     <tr>
       <th scope="row"><?php echo e($user->id); ?></th>
       <td><?php echo e($user->name); ?></td>

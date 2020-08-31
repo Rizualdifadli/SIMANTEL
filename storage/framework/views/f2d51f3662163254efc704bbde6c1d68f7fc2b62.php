@@ -41,11 +41,11 @@
                             <li class="nav-item">
                                 <a class="nav-link text-white" href="<?php echo e(route('login')); ?>"><?php echo e(__('Login')); ?></a>
                             </li>
-                            <?php if(Route::has('register')): ?>
+                            <!--<?php if(Route::has('register')): ?>
                                 <li class="nav-item">
                                     <a class="nav-link text-white" href="<?php echo e(route('register')); ?>"><?php echo e(__('Register')); ?></a>
                                 </li>
-                            <?php endif; ?>
+                            <?php endif; ?>-->
                         <?php else: ?>
                             <li class="nav-item dropdown">
                                 <a id="navbarDropdown " class="nav-link dropdown-toggle text-white" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>

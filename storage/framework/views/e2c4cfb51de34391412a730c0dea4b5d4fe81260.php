@@ -77,6 +77,7 @@ unset($__errorArgs, $__bag); ?>
 
                         <div class="form-group row mb-0">
                             <div class="col-md-6 offset-md-4">
+                              <a href="<?php echo e(route('admin.users.index')); ?>"><button type="button" class="btn btn-primary float-right">Back to Index</button></a>
                                 <button type="submit" class="btn btn-primary">
                                     <?php echo e(__('Register')); ?>
 
