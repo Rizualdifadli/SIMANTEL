@@ -30,7 +30,15 @@ group by a.kode_kecamatan');
         $provider = DB::table('provider')->get();
 		return view('tower_kecamatan', compact('region','data','provider'));
 	}
-	
+	public function kecamatanmersam_admin(Request $r){
+		$kode_kecamatan = $r->kode_kecamatan;
+        $region = DB::table('region')
+                    ->where('kode_kecamatan',$kode_kecamatan)->first();
+		$data = DB::table('tower')
+				->where('kode_kecamatan', $kode_kecamatan)->get();
+        $provider = DB::table('provider')->get();
+		return view('ADMIN/kecamatanmersam_admin', compact('region','data','provider'));
+	}
     // guest
     public function kecamatan_mersam(Request $data){
         $data=DB::table('tower')
@@ -83,9 +91,9 @@ group by a.kode_kecamatan');
     // akhir Guest
 
     // admin 
-    public function kecamatanmersam_admin(){
-        return view ('ADMIN/kecamatanmersam_admin');
-    }
+    // public function kecamatanmersam_admin(){
+    //     return view ('ADMIN/kecamatanmersam_admin');
+    // }
     public function kecamatanrtembesi_admin(){
         return view ('ADMIN/kecamatantembesi_admin');
     }

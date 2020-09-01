@@ -1,11 +1,11 @@
 
 
-<?php $__env->startSection('title' , $region->kecamatan); ?>
+<?php $__env->startSection('title' , $region ?? ''->kecamatan); ?>
 
 <?php $__env->startSection("container"); ?>
 <script src="js/tower_kecamatan.js"></script>
 <link rel="stylesheet" href="css/tower_kecamatan.css">
-<h2 class="text-center"><?php echo e($region->kecamatan); ?></h2>
+<h2 class="text-center"><?php echo e($region ?? ''->kecamatan); ?></h2>
 <table class="table table-bordered col-md-12" id="search">
   <thead class="thead-dark" >
       <th scope="col">TOWER</th>

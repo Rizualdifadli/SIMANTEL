@@ -61,6 +61,9 @@
                                     <a class="dropdown-item" href="{{route('admin.users.index')}}">
                                         Manajemen User
                                     </a>
+                                    <a class="dropdown-item" href="{{url('kecamatanmersam_admin')}}">
+                                        Manajemen Data Tower
+                                    </a>
 
                                     <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                                         @csrf
@@ -73,9 +76,8 @@
             </div>
         </nav>
 
-        <main class="py-4">
-            @yield('content')
-        </main>
+        <main class="py-4"></main>
+        @yield('content')
     </div>
 </body>
 </html>

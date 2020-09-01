@@ -1,10 +1,9 @@
-@extends ('layout.mainadmin')
-
+@extends ('layouts.app')
 
 @section('title' , 'KECAMATAN 1')
 
-@section('container')
-<link rel="stylesheet" href="css/kecamatan_1.css">
+@section('content')
+<link rel="stylesheet" href="css/kecamatanmersam_admin.css">
 <table class="table">
   <thead class="thead-dark">
     <tr>

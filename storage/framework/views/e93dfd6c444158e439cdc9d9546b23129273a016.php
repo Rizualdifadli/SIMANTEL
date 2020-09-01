@@ -1,10 +1,9 @@
 
 
-
 <?php $__env->startSection('title' , 'KECAMATAN 1'); ?>
 
-<?php $__env->startSection('container'); ?>
-<link rel="stylesheet" href="css/kecamatan_1.css">
+<?php $__env->startSection('content'); ?>
+<link rel="stylesheet" href="css/kecamatanmersam_admin.css">
 <table class="table">
   <thead class="thead-dark">
     <tr>
@@ -67,4 +66,4 @@
   </tbody>
 </table>
 <?php $__env->stopSection(); ?>
-<?php echo $__env->make('layout.mainadmin', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH C:\xampp\htdocs\SIMANTEL\resources\views/ADMIN/kecamatanmersam_admin.blade.php ENDPATH**/ ?>
+<?php echo $__env->make('layouts.app', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH C:\xampp\htdocs\SIMANTEL\resources\views/ADMIN/kecamatanmersam_admin.blade.php ENDPATH**/ ?>
