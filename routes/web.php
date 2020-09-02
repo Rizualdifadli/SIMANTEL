@@ -37,13 +37,8 @@ Route:: get('/kecamatan_bajubang', 'PagesController@kecamatan_bajubang');*/
 // guest
 
 // admin
-<<<<<<< HEAD
 Route:: get('/kecamatanmersam_admin', 'PagesController@kecamatanmersam_admin');
 //Route:: get('/kecamatantembesi_admin', 'PagesController@kecamatantembesi_admin');
-=======
-Route:: get('kecamatanmersam_admin', 'PagesController@kecamatanmersam_admin');
-Route:: get('/kecamatantembesi_admin', 'PagesController@kecamatantembesi_admin');
->>>>>>> 5d693928ea2fed42b83ba818cf3d41f9d0236e34
 
 // admin
 Auth::routes();

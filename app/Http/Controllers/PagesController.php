@@ -20,7 +20,7 @@ from tower as a, region as b where a.kode_kecamatan  = b.kode_kecamatan
 group by a.kode_kecamatan');
         return view ('simantel',compact('region'));
     }
-	
+
 	public function tower_kecamatan(Request $r){
 		$kode_kecamatan = $r->kode_kecamatan;
         $region = DB::table('region')
@@ -31,14 +31,10 @@ group by a.kode_kecamatan');
 		return view('tower_kecamatan', compact('region','data','provider'));
 	}
 	public function kecamatanmersam_admin(Request $r){
-		$kode_kecamatan = $r->kode_kecamatan;
-        $region = DB::table('region')
-                    ->where('kode_kecamatan',$kode_kecamatan)->first();
-		$data = DB::table('tower')
-				->where('kode_kecamatan', $kode_kecamatan)->get();
-        $provider = DB::table('provider')->get();
-		return view('ADMIN/kecamatanmersam_admin', compact('region','data','provider'));
-	}
+    $data=DB::table('tower')
+    ->get();
+    return view ('kecamatanmersam_admin',compact('data'));
+}
     // guest
     public function kecamatan_mersam(Request $data){
         $data=DB::table('tower')
@@ -90,7 +86,7 @@ group by a.kode_kecamatan');
     }
     // akhir Guest
 
-    // admin 
+    // admin
     // public function kecamatanmersam_admin(){
     //     return view ('ADMIN/kecamatanmersam_admin');
     // }

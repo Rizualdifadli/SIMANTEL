@@ -3,7 +3,7 @@
 
 @section('title' , 'TOWER ADMIN')
 
-@section('container')
+@section('content')
 <link rel="stylesheet" href="css/kecamatan_1.css">
 <table class="table">
   <thead class="thead-dark" >
