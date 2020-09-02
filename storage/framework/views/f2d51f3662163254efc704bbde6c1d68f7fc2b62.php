@@ -62,6 +62,9 @@
                                     <a class="dropdown-item" href="<?php echo e(route('admin.users.index')); ?>">
                                         Manajemen User
                                     </a>
+                                    <a class="dropdown-item" href="<?php echo e(url('kecamatanmersam_admin')); ?>">
+                                        Manajemen Data Tower
+                                    </a>
 
                                     <form id="logout-form" action="<?php echo e(route('logout')); ?>" method="POST" style="display: none;">
                                         <?php echo csrf_field(); ?>
@@ -74,9 +77,8 @@
             </div>
         </nav>
 
-        <main class="py-4">
-            <?php echo $__env->yieldContent('content'); ?>
-        </main>
+        <main class="py-4"></main>
+        <?php echo $__env->yieldContent('content'); ?>
     </div>
 </body>
 </html>
