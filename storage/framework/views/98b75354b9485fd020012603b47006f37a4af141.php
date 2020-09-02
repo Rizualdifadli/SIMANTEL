@@ -8,15 +8,49 @@
                 <div class="card-header">Edit User<?php echo e($user->name); ?></div>
                 <div class="card-body">
                   <form action="<?php echo e(route('admin.users.update',$user)); ?>" method="POST">
+                    <div class="form-group row">
+                        <label for="name" class="col-md-4 col-form-label text-md-right">Name</label>
+
+                        <div class="col-md-6">
+                            <input id="name" type="text" class="form-control <?php $__errorArgs = ['name'];
+$__bag = $errors->getBag($__errorArgs[1] ?? 'default');
+if ($__bag->has($__errorArgs[0])) :
+if (isset($message)) { $__messageOriginal = $message; }
+$message = $__bag->first($__errorArgs[0]); ?> is-invalid <?php unset($message);
+if (isset($__messageOriginal)) { $message = $__messageOriginal; }
+endif;
+unset($__errorArgs, $__bag); ?>" name="name" value="<?php echo e($user->name); ?>" required autocomplete="name" autofocus>
+
+                            <?php $__errorArgs = ['name'];
+$__bag = $errors->getBag($__errorArgs[1] ?? 'default');
+if ($__bag->has($__errorArgs[0])) :
+if (isset($message)) { $__messageOriginal = $message; }
+$message = $__bag->first($__errorArgs[0]); ?>
+                                <span class="invalid-feedback" role="alert">
+                                    <strong><?php echo e($message); ?></strong>
+                                </span>
+                            <?php unset($message);
+if (isset($__messageOriginal)) { $message = $__messageOriginal; }
+endif;
+unset($__errorArgs, $__bag); ?>
+                        </div>
+                    </div>
+
                     <?php echo csrf_field(); ?>
                     <?php echo e(method_field('PUT')); ?>
 
+                    <div class="form-group row">
+                      <label for="roles" class="col-md-4 col-form-label text-md-right">Roles</label>
+                      <div class="col-md-6">
                     <?php $__currentLoopData = $roles; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $role): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                       <div class="form-check">
-                        <input type="checkbox" name="roles[]" value="<?php echo e($role->id); ?>">
+                        <input type="checkbox" name="roles[]" value="<?php echo e($role->id); ?>"
+                        <?php if($user->roles->pluck('id')->contains($role->id)): ?>checked <?php endif; ?>>
                         <label><?php echo e($role->name); ?></label>
                       </div>
                       <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+                    </div>
+                  </div>
                       <button type="submit" class="btn btn-primary">
                         Update
                       </button>
