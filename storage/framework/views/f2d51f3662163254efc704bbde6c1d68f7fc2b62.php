@@ -65,10 +65,11 @@
                                     <a class="dropdown-item" href="<?php echo e(route('admin.users.index')); ?>">
                                         Manajemen User
                                     </a>
+                                    <?php if (app(\Illuminate\Contracts\Auth\Access\Gate::class)->check('manage-tower')): ?>
                                     <a class="dropdown-item" href="<?php echo e(url('kecamatanmersam_admin')); ?>">
                                         Manajemen Data Tower
                                     </a>
-
+                                    <?php endif; ?>
                                     <form id="logout-form" action="<?php echo e(route('logout')); ?>" method="POST" style="display: none;">
                                         <?php echo csrf_field(); ?>
                                     </form>
