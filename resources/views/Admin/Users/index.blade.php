@@ -7,7 +7,9 @@
             <div class="card">
                 <div class="card-header">Users</div>
                 <div class="card-body">
+                  @can('register-users')
                       <a href="{{ route('register') }}"><button type="button" class="btn btn-primary float-left">Register new user</button></a>
+                  @endcan
 <table class="table">
   <thead>
     <tr>
