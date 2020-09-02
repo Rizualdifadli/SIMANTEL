@@ -61,10 +61,11 @@
                                     <a class="dropdown-item" href="{{route('admin.users.index')}}">
                                         Manajemen User
                                     </a>
+                                    @can('manage-tower')
                                     <a class="dropdown-item" href="{{url('kecamatanmersam_admin')}}">
                                         Manajemen Data Tower
                                     </a>
-
+                                    @endcan
                                     <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                                         @csrf
                                     </form>

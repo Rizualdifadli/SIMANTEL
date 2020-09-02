@@ -2,6 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\User;
+use App\Role;
+use Gate;
 use Illuminate\Http\Request;
 use DB;
 
@@ -31,6 +34,10 @@ group by a.kode_kecamatan');
 		return view('tower_kecamatan', compact('region','data','provider'));
 	}
 	public function kecamatanmersam_admin(Request $r){
+
+    if(Gate::denies('delete-users')){
+        return redirect(route('admin.users.index'));
+      }
     $data=DB::table('tower')
     ->get();
     return view ('kecamatanmersam_admin',compact('data'));
