@@ -7,7 +7,9 @@
             <div class="card">
                 <div class="card-header">Users</div>
                 <div class="card-body">
+                  <?php if (app(\Illuminate\Contracts\Auth\Access\Gate::class)->check('register-users')): ?>
                       <a href="<?php echo e(route('register')); ?>"><button type="button" class="btn btn-primary float-left">Register new user</button></a>
+                  <?php endif; ?>
 <table class="table">
   <thead>
     <tr>
