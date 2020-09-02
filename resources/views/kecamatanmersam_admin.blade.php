@@ -1,11 +1,11 @@
 @extends ('layouts.app')
 
-
-@section('title' , 'TOWER ADMIN')
+@section('title' , 'MERSAM ADMIN')
 
 @section('content')
+<script src="js/kecamatanmersam_admin.js"></script>
 <link rel="stylesheet" href="css/kecamatan_1.css">
-<table class="table">
+<table class="table table-bordered" id="search">
   <thead class="thead-dark" >
       <th scope="col">TOWER</th>
       <th scope="col">DESA</th>
@@ -23,7 +23,7 @@
   <tbody>
     @foreach ($data as $x)
     <tr>
-        <td>{{$x->tower_id}}</td>
+        <td>{{$x->tower_id}} </td>
         <td>{{$x->desa}} </p></td>
         <td>{{$x->koordinat}}<p><a href="">lihat gambar{{$x->gambar}}</a></td>
         <td>{{$x->ketinggian_meter}}</td>
@@ -36,14 +36,13 @@
         <td>{{$x->hp_petugas}}</td>
         <td>{{$x->shelter_genset}}</td>
     </tr>
-    @endforeach
-        <td>
-          <a href="#" class="badge badge-success"><i class="fas fa-edit"></i></a>
+    <td>
+          <a href="{{$x->tower_id}}/edit" class="badge badge-success"><i class="far fa-edit"></i></a>
         </td>
-      <td>
+        <td>
         <a href="#" class="badge badge-danger"><i class="fas fa-trash"></i></a>
-      </td>
-    </tr>
+        </td>
+    @endforeach
   </tbody>
 </table>
 @endsection

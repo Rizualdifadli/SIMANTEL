@@ -11,11 +11,14 @@
 
     <!-- Scripts -->
     <script src="<?php echo e(asset('js/app.js')); ?>" defer></script>
+   
 
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
-
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <script src="https://kit.fontawesome.com/b75d321481.js" crossorigin="anonymous"></script>
+  
     <!-- Styles -->
     <link href="<?php echo e(asset('css/app.css')); ?>" rel="stylesheet">
 </head>
@@ -80,6 +83,11 @@
         <main class="py-4"></main>
         <?php echo $__env->yieldContent('content'); ?>
     </div>
+    <script src="js/search.js"></script>
+    <script src="https://cdn.datatables.net/1.10.21/js/jquery.dataTables.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script src="https://cdn.datatables.net/1.10.21/js/dataTables.bootstrap4.min.js"></script>
+
 </body>
 </html>
 <?php /**PATH C:\xampp\htdocs\SIMANTEL\resources\views/layouts/app.blade.php ENDPATH**/ ?>

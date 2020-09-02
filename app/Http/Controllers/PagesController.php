@@ -101,4 +101,7 @@ group by a.kode_kecamatan');
         return view ('ADMIN/kecamatantembesi_admin');
     }
     // akhir admin
+    public function edit(Request $data){
+        return view('edit', compact('data'));
+    }
 }
