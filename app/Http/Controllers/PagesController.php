@@ -31,7 +31,7 @@ group by a.kode_kecamatan');
 		$data = DB::table('tower')
 				->where('kode_kecamatan', $kode_kecamatan)->get();
         $provider = DB::table('provider')->get();
-		return view('tower_kecamatan', compact('region','data','provider','tower'));
+		return view('tower_kecamatan', compact('region','data','provider'));
 	}
 	public function kecamatanmersam_admin(Request $r){
 
