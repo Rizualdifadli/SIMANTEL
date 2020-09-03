@@ -31,7 +31,8 @@ group by a.kode_kecamatan');
 		$data = DB::table('tower')
 				->where('kode_kecamatan', $kode_kecamatan)->get();
         $provider = DB::table('provider')->get();
-		return view('tower_kecamatan', compact('region','data','provider'));
+        $tower = DB::table('tower')->get();
+		return view('tower_kecamatan', compact('region','data','provider','tower'));
 	}
 	public function kecamatanmersam_admin(Request $r){
 
@@ -101,7 +102,7 @@ group by a.kode_kecamatan');
         return view ('ADMIN/kecamatantembesi_admin');
     }
     // akhir admin
-    public function edit(Request $data){
-        return view('edit', compact('data'));
+    public function edit(Request $tower){
+        return view('edit', compact('tower'));
     }
 }

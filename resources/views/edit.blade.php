@@ -3,14 +3,16 @@
 @section('title' , 'MERSAM ADMIN')
 
 @section('content')
+<div class="jumbotron">
+<h3 class="text-center"> FORM UBAH DATA TOWER KECAMATAN</h3>
 <form>
   <div class="form-group">
     <label for="exampleInputEmail1">TOWER</label>
-    <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+    <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" value="{{$tower->tower_id}}">
   </div>
   <div class="form-group">
     <label for="exampleInputPassword1">DESA</label>
-    <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+    <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" value="{{$tower->desa}}">
   </div>
   <div class="form-group">
     <label for="exampleInputPassword1">KOORDINAT</label>
@@ -58,4 +60,5 @@
   </div>
   <button type="submit" class="btn btn-primary">Submit</button>
 </form>
+</div>
 @endsection
