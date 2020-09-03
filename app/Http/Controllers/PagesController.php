@@ -6,7 +6,7 @@ use App\User;
 use App\Role;
 use Gate;
 use Illuminate\Http\Request;
-use DB;
+use Illuminate\Support\Facades\DB;
 
 class PagesController extends Controller
 {
@@ -31,7 +31,6 @@ group by a.kode_kecamatan');
 		$data = DB::table('tower')
 				->where('kode_kecamatan', $kode_kecamatan)->get();
         $provider = DB::table('provider')->get();
-        $tower = DB::table('tower')->get();
 		return view('tower_kecamatan', compact('region','data','provider','tower'));
 	}
 	public function kecamatanmersam_admin(Request $r){
@@ -102,7 +101,7 @@ group by a.kode_kecamatan');
         return view ('ADMIN/kecamatantembesi_admin');
     }
     // akhir admin
-    public function edit(Request $tower){
-        return view('edit', compact('tower'));
+    public function edit(Request $data){
+        return view('edit', compact('data'));
     }
 }

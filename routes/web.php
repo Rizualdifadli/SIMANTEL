@@ -54,3 +54,4 @@ Route::namespace('Admin')->prefix('admin')->name('admin.')->group(function(){
 	Route::resource('/users','UsersController');
 });
 Route::get('{tower_id}/edit', 'PagesController@edit');
+Route::get('/edit/{tower}', 'EditController@show');
