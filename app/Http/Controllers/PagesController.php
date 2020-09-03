@@ -38,8 +38,9 @@ group by a.kode_kecamatan');
     if(Gate::denies('delete-users')){
         return redirect(route('admin.users.index'));
       }
-    $data=DB::table('tower')
-    ->get();
+      $data=DB::table('tower')
+      ->where('kode_kecamatan','150401')
+      ->get();
     return view ('kecamatanmersam_admin',compact('data'));
 }
     // guest
