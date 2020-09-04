@@ -33,7 +33,7 @@ group by a.kode_kecamatan');
         $provider = DB::table('provider')->get();
 		return view('tower_kecamatan', compact('region','data','provider'));
 	}
-	public function kecamatanmersam_admin(Request $r){
+	public function kecamatanmersam_admin(Request $data){
 
     if(Gate::denies('manage-tower')){
         return redirect(route('admin.users.index'));
@@ -98,10 +98,14 @@ group by a.kode_kecamatan');
     //     return view ('ADMIN/kecamatanmersam_admin');
     // }
     public function kecamatanrtembesi_admin(){
-        return view ('ADMIN/kecamatantembesi_admin');
+      $data=DB::table('tower')
+      ->get();
+        return view ('ADMIN/kecamatantembesi_admin',compact('data'));
     }
     // akhir admin
     public function edit(Request $data){
+      $data=DB::table('tower')
+      ->get();
         return view('edit', compact('data'));
     }
 }

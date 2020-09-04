@@ -9,51 +9,51 @@
 <form>
   <div class="form-group">
     <label for="exampleInputEmail1">TOWER</label>
-    <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" value="{{$data->tower_id}}">
+    <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" value="{{$data[0]->tower_id}}">
   </div>
-  <div class="form-group">
+<div class="form-group">
     <label for="exampleInputPassword1">DESA</label>
-    <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" value="{{$data->desa}}">
+    <input type="text" class="form-control" id="exampleInputEmail" aria-describedby="emailHelp" value="{{$data[1]->desa}}">
   </div>
   <div class="form-group">
     <label for="exampleInputPassword1">KOORDINAT</label>
-    <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" value="{{$data->koordinat}}">
+    <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" value="{{$data[2]->koordinat}}">
   </div>
   <div class="form-group">
     <label for="exampleInputPassword1">KETINGGIAN</label>
-    <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" value="{{$data->ketinggian}}">
+    <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" value="{{$data[3]->ketinggian_meter}}">
   </div>
   <div class="form-group">
     <label for="exampleInputPassword1">PEMILIK TANAH</label>
-    <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" value="{{$data->pemilik_tanah}}">
+    <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" value="{{$data[4]->pemilik_tanah}}">
   </div>
   <div class="form-group">
     <label for="exampleInputPassword1">IZIN TOWER</label>
-    <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" value="{{$data->izin_tower}}">
+    <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" value="{{$data[5]->izin_tower}}">
   </div>
   <div class="form-group">
     <label for="exampleInputPassword1">LISTRIK</label>
-    <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" value="{{$data->listrik}}">
+    <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" value="{{$data[6]->listrik}}">
   </div>
   <div class="form-group">
     <label for="exampleInputPassword1">PAGAR TOWER</label>
-    <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" value="{{$data->pagar_tower}}">
+    <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" value="{{$data[7]->pagar_tower}}">
   </div>
   <div class="form-group">
     <label for="exampleInputPassword1">PAPAN NAMA TOWER</label>
-    <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" value="{{$data->papan_nama}}">
+    <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" value="{{$data[8]->papan_nama}}">
   </div>
   <div class="form-group">
     <label for="exampleInputPassword1">PETUGAS</label>
-    <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" value="{{$data->petugas}}">
+    <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" value="{{$data[9]->petugas}}">
   </div>
   <div class="form-group">
     <label for="exampleInputPassword1">HP PETUGAS</label>
-    <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" value="{{$data->hp_petugas}}">
+    <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" value="{{$data[10]->hp_petugas}}">
   </div>
   <div class="form-group">
     <label for="exampleInputPassword1">SHELTER DAN GENSET</label>
-    <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" value="{{$data->shelter_genset}}">
+    <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" value="{{$data[11]->shelter_genset}}">
   </div>
   <div class="form-group form-check">
     <input type="checkbox" class="form-check-input" id="exampleCheck1">

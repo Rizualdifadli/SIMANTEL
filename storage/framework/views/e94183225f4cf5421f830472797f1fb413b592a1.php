@@ -1,11 +1,11 @@
 
 
-
-<?php $__env->startSection('title' , 'TOWER ADMIN'); ?>
+<?php $__env->startSection('title' , 'MERSAM ADMIN'); ?>
 
 <?php $__env->startSection('content'); ?>
+<script src="js/kecamatanmersam_admin.js"></script>
 <link rel="stylesheet" href="css/kecamatan_1.css">
-<table class="table">
+<table class="table table-bordered" id="search">
   <thead class="thead-dark" >
       <th scope="col">TOWER</th>
       <th scope="col">DESA</th>
@@ -23,7 +23,7 @@
   <tbody>
     <?php $__currentLoopData = $data; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $x): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
     <tr>
-        <td><?php echo e($x->tower_id); ?></td>
+        <td><?php echo e($x->tower_id); ?> </td>
         <td><?php echo e($x->desa); ?> </p></td>
         <td><?php echo e($x->koordinat); ?><p><a href="">lihat gambar<?php echo e($x->gambar); ?></a></td>
         <td><?php echo e($x->ketinggian_meter); ?></td>
@@ -36,14 +36,13 @@
         <td><?php echo e($x->hp_petugas); ?></td>
         <td><?php echo e($x->shelter_genset); ?></td>
     </tr>
-    <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
-        <td>
-          <a href="#" class="badge badge-success"><i class="fas fa-edit"></i></a>
+    <td>
+          <a href="<?php echo e($x->tower_id); ?>/edit" class="badge badge-success"><i class="far fa-edit"></i></a>
         </td>
-      <td>
+        <td>
         <a href="#" class="badge badge-danger"><i class="fas fa-trash"></i></a>
-      </td>
-    </tr>
+        </td>
+    <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
   </tbody>
 </table>
 <?php $__env->stopSection(); ?>
