@@ -35,11 +35,10 @@ group by a.kode_kecamatan');
 	}
 	public function kecamatanmersam_admin(Request $r){
 
-    if(Gate::denies('delete-users')){
+    if(Gate::denies('manage-tower')){
         return redirect(route('admin.users.index'));
       }
       $data=DB::table('tower')
-      ->where('kode_kecamatan','150401')
       ->get();
     return view ('kecamatanmersam_admin',compact('data'));
 }
