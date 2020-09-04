@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class EditController extends Controller
 {
@@ -55,9 +56,13 @@ class EditController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(Request $r)
     {
-        //
+        $tower_id=$r->tower_id;
+        $data=DB::table('tower')
+        ->where('tower_id',$tower_id)
+        ->get();
+          return view('edit', compact('data','tower_id'));
     }
 
     /**
@@ -67,9 +72,9 @@ class EditController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, $data)
     {
-        //
+        return $request;
     }
 
     /**
