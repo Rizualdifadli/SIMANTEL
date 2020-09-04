@@ -7,58 +7,60 @@
 <div class="jumbotron">
 <h3 class="text-center">FORM UBAH DATA TOWER KECAMATAN</h3>
 <form>
+  <?php $__currentLoopData = $data; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $x): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
   <div class="form-group">
     <label for="exampleInputEmail1">TOWER</label>
-    <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" value="<?php echo e($data[0]->tower_id); ?>">
+    <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" value="<?php echo e($x->tower_id); ?>">
   </div>
 <div class="form-group">
     <label for="exampleInputPassword1">DESA</label>
-    <input type="text" class="form-control" id="exampleInputEmail" aria-describedby="emailHelp" value="<?php echo e($data[1]->desa); ?>">
+    <input type="text" class="form-control" id="exampleInputEmail" aria-describedby="emailHelp" value="<?php echo e($x->desa); ?>">
   </div>
   <div class="form-group">
     <label for="exampleInputPassword1">KOORDINAT</label>
-    <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" value="<?php echo e($data[2]->koordinat); ?>">
+    <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" value="<?php echo e($x->koordinat); ?>">
   </div>
   <div class="form-group">
     <label for="exampleInputPassword1">KETINGGIAN</label>
-    <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" value="<?php echo e($data[3]->ketinggian_meter); ?>">
+    <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" value="<?php echo e($x->ketinggian_meter); ?>">
   </div>
   <div class="form-group">
     <label for="exampleInputPassword1">PEMILIK TANAH</label>
-    <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" value="<?php echo e($data[4]->pemilik_tanah); ?>">
+    <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" value="<?php echo e($x->pemilik_tanah); ?>">
   </div>
   <div class="form-group">
     <label for="exampleInputPassword1">IZIN TOWER</label>
-    <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" value="<?php echo e($data[5]->izin_tower); ?>">
+    <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" value="<?php echo e($x->izin_tower); ?>">
   </div>
   <div class="form-group">
     <label for="exampleInputPassword1">LISTRIK</label>
-    <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" value="<?php echo e($data[6]->listrik); ?>">
+    <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" value="<?php echo e($x->listrik); ?>">
   </div>
   <div class="form-group">
     <label for="exampleInputPassword1">PAGAR TOWER</label>
-    <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" value="<?php echo e($data[7]->pagar_tower); ?>">
+    <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" value="<?php echo e($x->pagar_tower); ?>">
   </div>
   <div class="form-group">
     <label for="exampleInputPassword1">PAPAN NAMA TOWER</label>
-    <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" value="<?php echo e($data[8]->papan_nama); ?>">
+    <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" value="<?php echo e($x->papan_nama); ?>">
   </div>
   <div class="form-group">
     <label for="exampleInputPassword1">PETUGAS</label>
-    <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" value="<?php echo e($data[9]->petugas); ?>">
+    <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" value="<?php echo e($x->petugas); ?>">
   </div>
   <div class="form-group">
     <label for="exampleInputPassword1">HP PETUGAS</label>
-    <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" value="<?php echo e($data[10]->hp_petugas); ?>">
+    <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" value="<?php echo e($x->hp_petugas); ?>">
   </div>
   <div class="form-group">
     <label for="exampleInputPassword1">SHELTER DAN GENSET</label>
-    <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" value="<?php echo e($data[11]->shelter_genset); ?>">
+    <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" value="<?php echo e($x->shelter_genset); ?>">
   </div>
   <div class="form-group form-check">
     <input type="checkbox" class="form-check-input" id="exampleCheck1">
     <label class="form-check-label" for="exampleCheck1">Check me out</label>
   </div>
+  <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
   <button type="submit" class="btn btn-primary col-sm-12">Submit</button>
 </form>
 </div>
