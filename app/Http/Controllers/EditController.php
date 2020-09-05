@@ -74,7 +74,34 @@ class EditController extends Controller
      */
     public function update(Request $request, $data)
     {
-        return $request;
+        $request->validate([
+        'desa'=>'required',
+        'koordinat'=>'required',
+        'pemilik_tanah'=>'required',
+        'ketinggian_meter'=>'required',
+        'listrik'=>'required',
+        'izin_tower'=>'required',
+        'papan_nama'=>'required',
+        'pagar_tower'=>'required',
+        'hp_petugas'=>'required',
+        'petugas'=>'required',
+        'shelter_genset'=>'required']);
+        data::where('tower_id', $data->tower_id)
+                ->update([
+                    'tower_id'=>$request->tower_id,
+                    'desa'=>$request->desa,
+                    'koordinat'=>$request->koordinat,
+                    'ketinggian_meter'=>$request->ketinggian_meter,
+                    'pemilik_tanah'=>$request->pemilik_tanah,
+                    'izin_tower'=>$request->izin_tower,
+                    'listrik'=>$request->listrik,
+                    'pagar_tower'=>$request->pagar_tower,
+                    'papan_nama'=>$request->papan_nama,
+                    'petugas'=>$request->petugas,
+                    'hp_petugas'=>$request->hp_petugas,
+                    'shelter_genset'=>$request->shelter_genset
+                ]);
+        return redirect('/edit')->with('status','data berhasil di update');
     }
 
     /**

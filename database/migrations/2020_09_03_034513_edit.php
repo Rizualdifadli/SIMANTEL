@@ -13,6 +13,7 @@ class Edit extends Migration
      */
     public function up()
     {
+        Schema::defaultStringLength(191);
         Schema::create('tower', function (Blueprint $table) {
             $table->id();
             $table->varchar('tower_id');

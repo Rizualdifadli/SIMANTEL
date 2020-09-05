@@ -1,15 +1,16 @@
 
 
-<?php $__env->startSection('title' , 'MERSAM ADMIN'); ?>
+<?php $__env->startSection('title' , 'Form Edit'); ?>
 
 <?php $__env->startSection('content'); ?>
 <link rel="stylesheet" href="/css/edit.css">
 <div class="jumbotron">
 <h3 class="text-center">FORM UBAH DATA TOWER KECAMATAN</h3>
-<?php $__currentLoopData = $data; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $x): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-<form method="post" action="/edit/<?php echo e($x->tower_id); ?>">
+
+<form method="post" action="/edit/<?php echo e($data); ?>">
 <?php echo method_field('patch'); ?>
     <?php echo csrf_field(); ?>
+    <?php $__currentLoopData = $data; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $x): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
   <div class="form-group">
     <label for="exampleInputEmail1">TOWER</label>
     <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" value="<?php echo e($x->tower_id); ?>">

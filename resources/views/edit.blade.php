@@ -1,15 +1,16 @@
 @extends ('layouts.app')
 
-@section('title' , 'MERSAM ADMIN')
+@section('title' , 'Form Edit')
 
 @section('content')
 <link rel="stylesheet" href="/css/edit.css">
 <div class="jumbotron">
 <h3 class="text-center">FORM UBAH DATA TOWER KECAMATAN</h3>
-@foreach($data as $x)
-<form method="post" action="/edit/{{$x->tower_id}}">
+
+<form method="post" action="/edit/{{$data}}">
 @method('patch')
     @csrf
+    @foreach($data as $x)
   <div class="form-group">
     <label for="exampleInputEmail1">TOWER</label>
     <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" value="{{$x->tower_id}}">
