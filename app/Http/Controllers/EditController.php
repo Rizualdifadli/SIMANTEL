@@ -87,6 +87,7 @@ class EditController extends Controller
         'petugas'=>'required',
         'shelter_genset'=>'required']);
         DB::table('tower')
+        ->where('tower_id', $request->tower_id)
         ->update([
                     //'tower_id'=>$request->tower_id,
                     'desa'=>$request->desa,
@@ -100,8 +101,7 @@ class EditController extends Controller
                     'petugas'=>$request->petugas,
                     'hp_petugas'=>$request->hp_petugas,
                     'shelter_genset'=>$request->shelter_genset
-                ])
-        ->where('tower_id', $request->tower_id);
+                ]);
         return redirect('/edit')->with('status','data berhasil di update');
     }
 

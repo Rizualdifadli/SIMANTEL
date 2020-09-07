@@ -6,8 +6,8 @@
 <link rel="stylesheet" href="/css/edit.css">
 <div class="jumbotron">
 <h3 class="text-center">FORM UBAH DATA TOWER KECAMATAN</h3>
-<form method="post" action="/edit/{{$data}}">
-@method('patch')
+<form method="post" action="/edit">
+@method('post')
     @csrf
     @foreach($data as $x)
   <div class="form-group">
