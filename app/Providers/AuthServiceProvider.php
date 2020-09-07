@@ -34,7 +34,7 @@ class AuthServiceProvider extends ServiceProvider
         });
 
         Gate::define('manage-tower',function($user){
-            return $user->hasRole(['admin','adminb']);
+            return $user->hasRole(['admin']);
         });
 
         Gate::define('manage-tower-mersam',function($user){
