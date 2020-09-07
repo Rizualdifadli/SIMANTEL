@@ -72,7 +72,7 @@ class EditController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $data)
+    public function update(Request $request)
     {
         $request->validate([
         'desa'=>'required',
@@ -86,8 +86,8 @@ class EditController extends Controller
         'hp_petugas'=>'required',
         'petugas'=>'required',
         'shelter_genset'=>'required']);
-        data::where('tower_id', $request->tower_id)
-                ->update([
+        DB::table('tower')
+        ->update([
                     //'tower_id'=>$request->tower_id,
                     'desa'=>$request->desa,
                     'koordinat'=>$request->koordinat,
@@ -100,7 +100,8 @@ class EditController extends Controller
                     'petugas'=>$request->petugas,
                     'hp_petugas'=>$request->hp_petugas,
                     'shelter_genset'=>$request->shelter_genset
-                ]);
+                ])
+        ->where('tower_id', $request->tower_id);
         return redirect('/edit')->with('status','data berhasil di update');
     }
 
