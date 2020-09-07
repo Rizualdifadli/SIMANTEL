@@ -86,9 +86,9 @@ class EditController extends Controller
         'hp_petugas'=>'required',
         'petugas'=>'required',
         'shelter_genset'=>'required']);
-        data::where('tower_id', $data->tower_id)
+        data::where('tower_id', $request->tower_id)
                 ->update([
-                    'tower_id'=>$request->tower_id,
+                    //'tower_id'=>$request->tower_id,
                     'desa'=>$request->desa,
                     'koordinat'=>$request->koordinat,
                     'ketinggian_meter'=>$request->ketinggian_meter,
