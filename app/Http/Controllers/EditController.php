@@ -25,7 +25,7 @@ class EditController extends Controller
      */
     public function create()
     {
-        //
+      return view('/create');
     }
 
     /**
@@ -36,7 +36,36 @@ class EditController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $tower = new tower;
+        // $tower->tower_id = $request->tower_id;
+        // $tower->desa =$request->desa;
+        // $tower->koordinat=$request->koordinat;
+        // $tower->ketinggian_meter=$request->ketinggian_meter;
+        // $tower->pemilik_tanah=$request->pemilik_tanah;
+        // $tower->izin_tower=$request->izin_tower;
+        // $tower->listrik=$request->listrik;
+        // $tower->pagar_tower=$request->pagar_tower;
+        // $tower->papan_nama=$request->papan_nama;
+        // $tower->petugas=$request->petugas;
+        // $tower->hp_petugas=$request->hp_petugas;
+        // $tower->shelter_genset=$request->shelter_genset;
+
+        // $tower->save();
+        DB::create([
+            'tower_id'= $request->tower_id,
+            'desa' =$request->desa;
+            'koordinat'=$request->koordinat;
+            'ketinggian_meter'=$request->ketinggian_meter;
+            'pemilik_tanah'=$request->pemilik_tanah;
+            'izin_tower'=$request->izin_tower;
+            'listrik'=$request->listrik;
+            'pagar_tower'=$request->pagar_tower;
+            'papan_nama'=$request->papan_nama;
+            'petugas'=$request->petugas;
+            'hp_petugas'=$request->hp_petugas;
+            'shelter_genset'=$request->shelter_genset;
+        ]);
+        return redirect('/kecamatanmersam_admin')->with('status','data berhasil di update');
     }
 
     /**
@@ -62,7 +91,7 @@ class EditController extends Controller
         $data=DB::table('tower')
         ->where('tower_id',$tower_id)
         ->get();
-          return view('edit', compact('data','tower_id'));
+          return view('/edit', compact('data','tower_id'));
     }
 
     /**
@@ -103,6 +132,7 @@ class EditController extends Controller
                     'shelter_genset'=>$request->shelter_genset
                 ]);
         return redirect('/kecamatanmersam_admin')->with('status','data berhasil di update');
+        
     }
 
     /**

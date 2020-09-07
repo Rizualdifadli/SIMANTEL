@@ -5,6 +5,7 @@
 @section('content')
 <script src="js/kecamatanmersam_admin.js"></script>
 <link rel="stylesheet" href="css/kecamatan_1.css">
+<a href="/create" role="button" class="btn btn-primary">TAMBAH DATA TOWER</a>
 <table class="table table-bordered" id="search">
   <thead class="thead-dark" >
       <th scope="col">TOWER</th>
