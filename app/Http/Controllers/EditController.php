@@ -36,7 +36,7 @@ class EditController extends Controller
      */
     public function store(Request $request)
     {
-        $tower = new tower;
+        // $tower = new tower;
         // $tower->tower_id = $request->tower_id;
         // $tower->desa =$request->desa;
         // $tower->koordinat=$request->koordinat;
@@ -51,21 +51,21 @@ class EditController extends Controller
         // $tower->shelter_genset=$request->shelter_genset;
 
         // $tower->save();
-        DB::create([
-            'tower_id'= $request->tower_id,
-            'desa' =$request->desa;
-            'koordinat'=$request->koordinat;
-            'ketinggian_meter'=$request->ketinggian_meter;
-            'pemilik_tanah'=$request->pemilik_tanah;
-            'izin_tower'=$request->izin_tower;
-            'listrik'=$request->listrik;
-            'pagar_tower'=$request->pagar_tower;
-            'papan_nama'=$request->papan_nama;
-            'petugas'=$request->petugas;
-            'hp_petugas'=$request->hp_petugas;
-            'shelter_genset'=$request->shelter_genset;
-        ]);
-        return redirect('/kecamatanmersam_admin')->with('status','data berhasil di update');
+    //     DB::create([
+    //         'tower_id'=> $request->tower_id,
+    //         'desa' =>$request->desa,
+    //         'koordinat'=>$request->koordinat,
+    //         'ketinggian_meter'=>$request->ketinggian_meter,
+    //         'pemilik_tanah'=>$request->pemilik_tanah,
+    //         'izin_tower'=>$request->izin_tower,
+    //         'listrik'=>$request->listrik,
+    //         'pagar_tower'=>$request->pagar_tower,
+    //         'papan_nama'=>$request->papan_nama,
+    //         'petugas'=>$request->petugas,
+    //         'hp_petugas'=>$request->hp_petugas,
+    //         'shelter_genset'=>$request->shelter_genset,
+    //     ]);
+    //     return redirect('/kecamatanmersam_admin')->with('status','data berhasil di update');
     }
 
     /**
