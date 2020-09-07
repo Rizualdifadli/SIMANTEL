@@ -102,7 +102,7 @@ class EditController extends Controller
                     'hp_petugas'=>$request->hp_petugas,
                     'shelter_genset'=>$request->shelter_genset
                 ]);
-        return redirect('/edit')->with('status','data berhasil di update');
+        return redirect('/kecamatanmersam_admin')->with('status','data berhasil di update');
     }
 
     /**

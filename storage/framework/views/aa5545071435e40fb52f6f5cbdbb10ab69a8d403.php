@@ -7,7 +7,6 @@
 <div class="jumbotron">
 <h3 class="text-center">FORM UBAH DATA TOWER KECAMATAN</h3>
 <form method="post" action="/edit">
-<?php echo method_field('post'); ?>
     <?php echo csrf_field(); ?>
     <?php $__currentLoopData = $data; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $x): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
   <div class="form-group">
