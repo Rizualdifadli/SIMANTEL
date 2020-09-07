@@ -54,8 +54,6 @@ Route::namespace('Admin')->prefix('admin')->name('admin.')->group(function(){
 	Route::resource('/users','UsersController');
 });
 Route::get('{tower_id}/edit', 'EditController@edit');
-Route::get('/create', 'EditController@create');
 Route::get('/edit/{tower}', 'EditController@show');
 Route::post('/edit','EditController@update');
-Route::post('/kecamatanmersam_admin','EditController@store');
 // Route::resource('edit','EditController');
