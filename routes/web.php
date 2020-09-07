@@ -56,3 +56,4 @@ Route::namespace('Admin')->prefix('admin')->name('admin.')->group(function(){
 Route::get('{tower_id}/edit', 'EditController@edit');
 Route::get('/edit/{tower}', 'EditController@show');
 Route::patch('/edit/{data}','EditController@update');
+// Route::resource('edit','EditController');

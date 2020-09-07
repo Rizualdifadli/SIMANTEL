@@ -6,7 +6,6 @@
 <link rel="stylesheet" href="/css/edit.css">
 <div class="jumbotron">
 <h3 class="text-center">FORM UBAH DATA TOWER KECAMATAN</h3>
-
 <form method="post" action="/edit/<?php echo e($data); ?>">
 <?php echo method_field('patch'); ?>
     <?php echo csrf_field(); ?>
@@ -59,14 +58,11 @@
     <label for="exampleInputPassword1">SHELTER DAN GENSET</label>
     <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" value="<?php echo e($x->shelter_genset); ?>">
   </div>
-  <div class="form-group form-check">
-    <input type="checkbox" class="form-check-input" id="exampleCheck1">
-    <label class="form-check-label" for="exampleCheck1">Check me out</label>
-  </div>
   <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
   <button type="submit" class="btn btn-primary col-sm-12">Submit</button>
 </form>
 </div>
+
 <?php $__env->stopSection(); ?>
 
 <?php echo $__env->make('layouts.app', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH C:\xampp\htdocs\SIMANTEL\resources\views/edit.blade.php ENDPATH**/ ?>

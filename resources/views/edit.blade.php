@@ -6,7 +6,6 @@
 <link rel="stylesheet" href="/css/edit.css">
 <div class="jumbotron">
 <h3 class="text-center">FORM UBAH DATA TOWER KECAMATAN</h3>
-
 <form method="post" action="/edit/{{$data}}">
 @method('patch')
     @csrf
@@ -59,12 +58,9 @@
     <label for="exampleInputPassword1">SHELTER DAN GENSET</label>
     <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" value="{{$x->shelter_genset}}">
   </div>
-  <div class="form-group form-check">
-    <input type="checkbox" class="form-check-input" id="exampleCheck1">
-    <label class="form-check-label" for="exampleCheck1">Check me out</label>
-  </div>
   @endforeach
   <button type="submit" class="btn btn-primary col-sm-12">Submit</button>
 </form>
 </div>
+
 @endsection
