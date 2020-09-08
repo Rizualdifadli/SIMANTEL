@@ -74,18 +74,6 @@ class EditController extends Controller
      */
     public function update(Request $request)
     {
-        $request->validate([
-        'desa'=>'required',
-        'koordinat'=>'required',
-        'pemilik_tanah'=>'required',
-        'ketinggian_meter'=>'required',
-        'listrik'=>'required',
-        'izin_tower'=>'required',
-        'papan_nama'=>'required',
-        'pagar_tower'=>'required',
-        'hp_petugas'=>'required',
-        'petugas'=>'required',
-        'shelter_genset'=>'required']);
         DB::table('tower')
         ->where('tower_id', $request->tower_id)
         ->update([
