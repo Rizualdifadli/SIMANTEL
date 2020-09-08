@@ -13,9 +13,11 @@ class EditController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $r)
     {
-        //
+        $data=DB::table('tower')
+        ->get();
+          return view ('/kecamatanmersam_admin',compact('data'));
     }
 
     /**
@@ -25,7 +27,7 @@ class EditController extends Controller
      */
     public function create()
     {
-        //
+        return view ('/create');
     }
 
     /**
@@ -36,7 +38,10 @@ class EditController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        DB::table('tower')->insert(
+            array('desa' => $request->desa)
+        );
+        return redirect('/kecamatanmersam_admin')->with('status','data berhasil di update');
     }
 
     /**
@@ -101,6 +106,7 @@ class EditController extends Controller
      */
     public function destroy($id)
     {
-        //
+        DB::table('tower')->delete();
+        return redirect('/kecamatanmersam_admin')->with('success','data berhasil di hapus');
     }
 }
