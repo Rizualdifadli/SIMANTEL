@@ -43,7 +43,7 @@
                         @guest
                             <li class="nav-item">
                                 <a class="nav-link text-white" href="{{ route('login') }}">{{ __('Login') }}</a>
-                            </li>                  
+                            </li>
                         @else
                             <li class="nav-item dropdown">
                                 <a id="navbarDropdown " class="nav-link dropdown-toggle text-white" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
@@ -59,11 +59,11 @@
                                     <a class="dropdown-item" href="{{route('admin.users.index')}}">
                                         Manajemen User
                                     </a>
-                                    @can('manage-tower')
+                                    
                                     <a class="dropdown-item" href="{{url('kecamatanmersam_admin')}}">
                                         Manajemen Data Tower
                                     </a>
-                                    @endcan
+
                                     <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                                         @csrf
                                     </form>
