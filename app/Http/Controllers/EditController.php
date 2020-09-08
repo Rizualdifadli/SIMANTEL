@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\DB;
 
 class EditController extends Controller
@@ -39,7 +40,18 @@ class EditController extends Controller
     public function store(Request $request)
     {
         DB::table('tower')->insert(
-            array('desa' => $request->desa)
+            array( 
+                'desa' => $request->desa,
+                'koordinat' => $request->koordinat,
+                'izin_tower' => $request->izin_tower,
+                'listrik' => $request->listrik,
+                'pagar_tower' => $request->pagar_tower,
+                'papan_nama' => $request->papan_nama,
+                'petugas' => $request->petugas,
+                'hp_petugas' => $request->hp_petugas,
+                'shelter_genset' => $request->shelter_genset
+                )
+
         );
         return redirect('/kecamatanmersam_admin')->with('status','data berhasil di update');
     }
@@ -104,7 +116,7 @@ class EditController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy( )
     {
         DB::table('tower')->delete();
         return redirect('/kecamatanmersam_admin')->with('success','data berhasil di hapus');

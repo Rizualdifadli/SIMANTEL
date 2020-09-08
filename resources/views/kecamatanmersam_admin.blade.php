@@ -26,7 +26,7 @@
     <tr>
         <td>{{$x->tower_id}} </td>
         <td>{{$x->desa}} </p></td>
-        <td>{{$x->koordinat}}<p><a href="">lihat gambar{{$x->gambar}}</a></td>
+        <td>{{$x->koordinat}}<p><a href="/gambar">lihat gambar{{$x->gambar}}</a></td>
         <td>{{$x->ketinggian_meter}}</td>
         <td>{{$x->pemilik_tanah}}</td>
         <td>{{$x->izin_tower}}</td>
@@ -41,8 +41,11 @@
           <a href="{{$x->tower_id}}/edit" class="badge badge-success"><i class="far fa-edit"></i></a>
         </td>
         <td>
-        <a href="#" class="badge badge-danger"><i class="fas fa-trash"></i></a>
-        </td>
+        <form action="/kecamatanmersam_admin" method="post">
+        @method('delete')
+        @csrf
+        <button type="submit" class="badge badge-danger"><i class="fas fa-trash"></i></button>
+        </td></form>
     @endforeach
   </tbody>
 </table>

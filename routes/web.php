@@ -61,4 +61,6 @@ Route::get('/create', 'EditController@create');
 Route::get('/edit/{tower}', 'EditController@show');
 Route::post('/edit','EditController@update');
 Route::post('/kecamatanmersam_admin', 'EditController@store');
+Route::delete('/kecamatanmersam_admin', 'EditController@destroy');
+
 // Route::resource('edit','EditController');

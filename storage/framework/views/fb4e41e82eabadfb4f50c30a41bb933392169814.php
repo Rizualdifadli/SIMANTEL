@@ -54,7 +54,7 @@
   </div>
   <div class="form-group">
     <label for="exampleInputPassword1">SHELTER DAN GENSET</label>
-    <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="shelter_gent" >
+    <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="shelter_genset" >
   </div>
   <button type="submit" class="btn btn-primary col-sm-12">Submit</button>
 </form>
