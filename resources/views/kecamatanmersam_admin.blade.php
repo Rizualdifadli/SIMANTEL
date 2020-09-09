@@ -9,6 +9,7 @@
 <table class="table table-bordered" id="search">
   <thead class="thead-dark" >
       <th scope="col">TOWER</th>
+      <th scope="col">KODE KECAMATAN</th>
       <th scope="col">DESA</th>
       <th scope="col">KOORDINAT</th>
       <th scope="col">KETINGGIAN</th>
@@ -25,6 +26,7 @@
     @foreach ($data as $x)
     <tr>
         <td>{{$x->tower_id}} </td>
+        <td>{{$x->kode_kecamatan}}</td>
         <td>{{$x->desa}} </p></td>
         <td>{{$x->koordinat}}<p><a href="/gambar">lihat gambar{{$x->gambar}}</a></td>
         <td>{{$x->ketinggian_meter}}</td>

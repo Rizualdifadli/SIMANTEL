@@ -26,9 +26,13 @@ class EditController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create(Request $request)
     {
-        return view ('/create');
+        $tower_id=$request->tower_id;
+        $data=DB::table('tower')
+        ->where('tower_id',$tower_id)
+        ->get();
+        return view ('/create ', compact('data','tower_id'));
     }
 
     /**
@@ -41,6 +45,8 @@ class EditController extends Controller
     {
         DB::table('tower')->insert(
             array( 
+                'tower_id'=> $request->tower_id,
+                'kode_kecamatan'=> $request->kode_kecamatan,
                 'desa' => $request->desa,
                 'koordinat' => $request->koordinat,
                 'izin_tower' => $request->izin_tower,
@@ -116,9 +122,9 @@ class EditController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy( )
+    public function destroy( Request $request,Tower $tower)
     {
-        DB::table('tower')->delete();
+        DB::table('tower')->where('tower_id')->delete();
         return redirect('/kecamatanmersam_admin')->with('success','data berhasil di hapus');
     }
 }

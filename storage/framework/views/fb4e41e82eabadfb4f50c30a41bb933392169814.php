@@ -8,9 +8,14 @@
 <h3 class="text-center">FORM TAMBAH DATA TOWER KECAMATAN</h3>
 <form method="post" action="/kecamatanmersam_admin">
 <?php echo csrf_field(); ?>
+
   <div class="form-group">
     <label for="exampleInputEmail1">TOWER</label>
-    <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+    <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="tower_id">
+  </div>
+  <div class="form-group">
+    <label for="exampleInputEmail1">KODE KECAMATAN</label>
+    <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="kode_kecamatan">
   </div>
 <div class="form-group">
     <label for="exampleInputPassword1">DESA</label>
@@ -59,5 +64,6 @@
   <button type="submit" class="btn btn-primary col-sm-12">Submit</button>
 </form>
 </div>
+
 <?php $__env->stopSection(); ?>
 <?php echo $__env->make('layouts.app', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH C:\xampp\htdocs\SIMANTEL\resources\views//create.blade.php ENDPATH**/ ?>

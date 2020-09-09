@@ -9,6 +9,7 @@
 <table class="table table-bordered" id="search">
   <thead class="thead-dark" >
       <th scope="col">TOWER</th>
+      <th scope="col">KODE KECAMATAN</th>
       <th scope="col">DESA</th>
       <th scope="col">KOORDINAT</th>
       <th scope="col">KETINGGIAN</th>
@@ -25,6 +26,7 @@
     <?php $__currentLoopData = $data; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $x): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
     <tr>
         <td><?php echo e($x->tower_id); ?> </td>
+        <td><?php echo e($x->kode_kecamatan); ?></td>
         <td><?php echo e($x->desa); ?> </p></td>
         <td><?php echo e($x->koordinat); ?><p><a href="/gambar">lihat gambar<?php echo e($x->gambar); ?></a></td>
         <td><?php echo e($x->ketinggian_meter); ?></td>

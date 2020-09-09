@@ -13,6 +13,10 @@
     <label for="exampleInputEmail1">TOWER</label>
     <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" value="<?php echo e($x->tower_id); ?>" name="tower_id">
   </div>
+  <div class="form-group">
+    <label for="exampleInputEmail1">KODE KECAMATAN</label>
+    <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" value="<?php echo e($x->kode_kecamatan); ?>" name="kode_kecamatan">
+  </div>
 <div class="form-group">
     <label for="exampleInputPassword1">DESA</label>
     <input type="text" class="form-control" id="exampleInputEmail" aria-describedby="emailHelp" value="<?php echo e($x->desa); ?>" name="desa">
