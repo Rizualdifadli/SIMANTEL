@@ -6,7 +6,7 @@
 <link rel="stylesheet" href="/css/edit.css">
 <div class="jumbotron">
 <h3 class="text-center">FORM TAMBAH DATA TOWER KECAMATAN</h3>
-<form method="post" action="/kecamatanmersam_admin">
+<form method="post" action="/kecamatanmersam_admin" enctype="multipart/form-data">
 <?php echo csrf_field(); ?>
 
   <div class="form-group col-md-12 ">
@@ -90,12 +90,11 @@
         <option>No</option>
     </select>
   </div>
-  <div class="custom-file form-group col-md-2">
-    <input type="file" class="custom-file-input" id="validatedCustomFile" name="gambar" >
-    <label class="custom-file-label" for="validatedCustomFile">Pilih Gambar</label>
-    <div class="invalid-feedback">Example invalid custom file feedback</div>
+  <div class="form-group col-md-3">
+    <label for="exampleFormControlFile1"> file input</label>
+    <input type="file" class="form-control-file" id="exampleFormControlFile1" name="gambar">
   </div>
-  <button type="submit" class="btn btn-primary col-sm-12">Submit</button>
+ <div class="col-md-12"> <button type="submit" class="btn btn-primary col-sm-12">Submit</button></div>
 </form>
 </div>
 
