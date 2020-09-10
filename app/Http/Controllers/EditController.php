@@ -6,6 +6,8 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\DB;
+use Gate;
+
 
 class EditController extends Controller
 {
@@ -16,9 +18,72 @@ class EditController extends Controller
      */
     public function index(Request $r)
     {
+      if(Gate::allows('manage-tower')){
         $data=DB::table('tower')
         ->get();
-          return view ('/kecamatanmersam_admin',compact('data'));
+        return view ('kecamatanmersam_admin',compact('data'));
+        //return redirect(route('admin.users.index'));
+      }
+
+      if(Gate::allows('manage-tower-mersam')){
+      $data=DB::table('tower')
+      ->where('kode_kecamatan','150401')
+      ->get();
+      return view ('kecamatanmersam_admin',compact('data'));
+      }
+
+      if(Gate::allows('manage-tower-bulian')){
+      $data=DB::table('tower')
+      ->where('kode_kecamatan','150403')
+      ->get();
+      return view ('kecamatanmersam_admin',compact('data'));
+      }
+
+      if(Gate::allows('manage-tower-tembesi')){
+      $data=DB::table('tower')
+      ->where('kode_kecamatan','150402')
+      ->get();
+      return view ('kecamatanmersam_admin',compact('data'));
+      }
+
+      if(Gate::allows('manage-tower-batin')){
+      $data=DB::table('tower')
+      ->where('kode_kecamatan','150404')
+      ->get();
+      return view ('kecamatanmersam_admin',compact('data'));
+      }
+
+      if(Gate::allows('manage-tower-pemayung')){
+      $data=DB::table('tower')
+      ->where('kode_kecamatan','150405')
+      ->get();
+      return view ('kecamatanmersam_admin',compact('data'));
+      }
+
+      if(Gate::allows('manage-tower-seboulu')){
+      $data=DB::table('tower')
+      ->where('kode_kecamatan','150406')
+      ->get();
+      return view ('kecamatanmersam_admin',compact('data'));
+      }
+
+      if(Gate::allows('manage-tower-seboilir')){
+      $data=DB::table('tower')
+      ->where('kode_kecamatan','150408')
+      ->get();
+      return view ('kecamatanmersam_admin',compact('data'));
+      }
+
+      if(Gate::allows('manage-tower-bajubang')){
+      $data=DB::table('tower')
+      ->where('kode_kecamatan','150407')
+      ->get();
+      return view ('kecamatanmersam_admin',compact('data'));
+      }
+
+      else{
+        return redirect(route('admin.users.index'));
+      }
     }
 
     /**
@@ -44,7 +109,7 @@ class EditController extends Controller
     public function store(Request $request)
     {
         DB::table('tower')->insert(
-            array( 
+            array(
                 'tower_id'=> $request->tower_id,
                 'kode_kecamatan'=> $request->kode_kecamatan,
                 'desa' => $request->desa,

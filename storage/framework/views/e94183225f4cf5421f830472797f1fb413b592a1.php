@@ -5,9 +5,11 @@
 <?php $__env->startSection('content'); ?>
 <script src="js/kecamatanmersam_admin.js"></script>
 <link rel="stylesheet" href="css/kecamatan_1.css">
+<a href="/create" role="button" class="btn btn-primary">TAMBAH DATA TOWER</a>
 <table class="table table-bordered" id="search">
   <thead class="thead-dark" >
       <th scope="col">TOWER</th>
+      <th scope="col">KODE KECAMATAN</th>
       <th scope="col">DESA</th>
       <th scope="col">KOORDINAT</th>
       <th scope="col">KETINGGIAN</th>
@@ -24,8 +26,9 @@
     <?php $__currentLoopData = $data; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $x): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
     <tr>
         <td><?php echo e($x->tower_id); ?> </td>
+        <td><?php echo e($x->kode_kecamatan); ?></td>
         <td><?php echo e($x->desa); ?> </p></td>
-        <td><?php echo e($x->koordinat); ?><p><a href="">lihat gambar<?php echo e($x->gambar); ?></a></td>
+        <td><?php echo e($x->koordinat); ?><p><a href="/gambar">lihat gambar<?php echo e($x->gambar); ?></a></td>
         <td><?php echo e($x->ketinggian_meter); ?></td>
         <td><?php echo e($x->pemilik_tanah); ?></td>
         <td><?php echo e($x->izin_tower); ?></td>
@@ -40,8 +43,11 @@
           <a href="<?php echo e($x->tower_id); ?>/edit" class="badge badge-success"><i class="far fa-edit"></i></a>
         </td>
         <td>
-        <a href="#" class="badge badge-danger"><i class="fas fa-trash"></i></a>
-        </td>
+        <form action="/kecamatanmersam_admin" method="post">
+        <?php echo method_field('delete'); ?>
+        <?php echo csrf_field(); ?>
+        <button type="submit" class="badge badge-danger"><i class="fas fa-trash"></i></button>
+        </td></form>
     <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
   </tbody>
 </table>
