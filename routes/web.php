@@ -51,9 +51,11 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
+//Route::post('/changepassword','App\Http\Controllers\Admin\UsersController@changePassword')->name('changePassword');
 
 Route::namespace('Admin')->prefix('admin')->name('admin.')->group(function(){
 	Route::resource('/users','UsersController');
+	Route::post('/changepassword','UsersController@changePassword')->name('changePassword');
 });
 Route::get('/kecamatanmersam_admin', 'EditController@index');
 Route::get('{tower_id}/edit', 'EditController@edit');
