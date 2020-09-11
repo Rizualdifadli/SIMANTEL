@@ -7,6 +7,8 @@ use Illuminate\Http\Request;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\DB;
 use Gate;
+use Storage;
+
 
 
 class EditController extends Controller
@@ -162,6 +164,9 @@ class EditController extends Controller
      */
     public function update(Request $request)
     {
+        if($request->gambar){
+            Storage::delete($request->gambar);
+        }
         DB::table('tower')
         ->where('tower_id', $request->tower_id)
         ->update([

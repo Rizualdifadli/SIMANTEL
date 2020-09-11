@@ -8,8 +8,8 @@
 <h3 class="text-center">FOTO TOWER KECAMATAN</h3>
     <?php echo csrf_field(); ?>
     <?php $__currentLoopData = $data; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $x): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-  <div class="form-group col-md-3">
-    <img src=" <?php echo e(asset( 'storage/'. $x->gambar)); ?>" alt="foto_tower">
+  <div class="form-group rounded mx-auto d-block">
+    <img src=" <?php echo e(asset( 'storage/'. $x->gambar)); ?>" class="rounded mx-auto d-block" alt="foto_tower">
   </div>
   <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
 

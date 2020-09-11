@@ -7,6 +7,7 @@ use App\Role;
 use Gate;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use Storage;
 
 class PagesController extends Controller
 {
