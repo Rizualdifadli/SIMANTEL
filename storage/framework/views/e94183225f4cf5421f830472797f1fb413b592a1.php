@@ -21,14 +21,15 @@
       <th scope="col">PETUGAS</th>
       <th scope="col">HP PETUGAS</th>
       <th scope="col">SHELTER DAN GENSET</th>
+      <th scope="col">GAMBAR</th>
     </thead>
   <tbody>
     <?php $__currentLoopData = $data; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $x): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
     <tr>
         <td><?php echo e($x->tower_id); ?> </td>
         <td><?php echo e($x->kode_kecamatan); ?></td>
-        <td><?php echo e($x->desa); ?> </p></td>
-        <td><?php echo e($x->koordinat); ?><p><a href="/gambar">lihat gambar<?php echo e($x->gambar); ?></a></td>
+        <td><?php echo e($x->desa); ?></p><a href="/foto">lihat gambar</a></td>
+        <td><?php echo e($x->koordinat); ?></td>
         <td><?php echo e($x->ketinggian_meter); ?></td>
         <td><?php echo e($x->pemilik_tanah); ?></td>
         <td><?php echo e($x->izin_tower); ?></td>
@@ -38,6 +39,7 @@
         <td><?php echo e($x->petugas); ?></td>
         <td><?php echo e($x->hp_petugas); ?></td>
         <td><?php echo e($x->shelter_genset); ?></td>
+        <td></td>
     </tr>
     <td>
           <a href="<?php echo e($x->tower_id); ?>/edit" class="badge badge-success"><i class="far fa-edit"></i></a>
