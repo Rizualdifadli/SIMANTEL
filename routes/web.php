@@ -34,7 +34,7 @@ Route:: get('/kecamatan_pemayung', 'PagesController@kecamatan_pemayung');
 Route:: get('/kecamatan_maroseboulu', 'PagesController@kecamatan_maroseboulu');
 Route:: get('/kecamatan_maroseboilir', 'PagesController@kecamatan_maroseboilir');
 Route:: get('/kecamatan_bajubang', 'PagesController@kecamatan_bajubang');*/
-Route::get('/gambar', 'PagesController@gambar');
+Route::get('{tower_id}/foto', 'PagesController@gambar');
 
 // guest
 
@@ -62,7 +62,5 @@ Route::get('/edit/{tower}', 'EditController@show');
 Route::post('/edit','EditController@update');
 Route::post('/kecamatanmersam_admin', 'EditController@store');
 Route::delete('/kecamatanmersam_admin/{tower_id}', 'EditController@destroy');
-Route::get('/foto', 'PagesController@gambar');
-
 
 // Route::resource('edit','EditController');

@@ -51,10 +51,12 @@ group by a.kode_kecamatan');
         return view ('ADMIN/kecamatantembesi_admin',compact('data'));
     }
     // akhir admin
-    public function gambar(){
+    public function gambar(Request $r){
+        $tower_id=$r->tower_id;
         $data=DB::table('tower')
+        ->where('tower_id',$tower_id)
         ->get();
-        return view('/gambar', compact('data'));
+          return view('/foto', compact('data','tower_id'));
     }
 
 }
