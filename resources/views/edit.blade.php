@@ -34,29 +34,29 @@
     <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="pemilik_tanah" value="{{$x->pemilik_tanah}}">
   </div>
   <div class="form-group col-md-2">
+    <label for="exampleInputPassword1">PEMILIK TANAH</label>
     <select class="custom-select" id="validationCustom04" name="izin_tower"  value="{{$x->izin_tower}}" >
-      <option selected disabled value=""> IZIN TOWER</option>
         <option>Yes</option>
         <option>No</option>
       </select>
   </div>
   <div class="form-group col-md-2">
+  <label selected disabled value="">LISTRIK</label>
   <select class="custom-select" id="validationCustom04" name="listrik" value="{{$x->listrik}}" >
-      <option selected disabled value="">LISTRIK</option>
         <option>Yes</option>
         <option>No</option>
     </select>
   </div>
   <div class="form-group col-md-2">
+  <label selected disabled value="">PAGAR TOWER</label>
   <select class="custom-select" id="validationCustom04" name="pagar_tower" value="{{$x->pagar_tower}}">
-      <option selected disabled value="">PAGAR TOWER</option>
         <option>Yes</option>
         <option>No</option>
     </select>
   </div>
   <div class="form-group col-md-2">
+  <label selected disabled value="">PAPAN NAMA TOWER</label>
   <select class="custom-select" id="validationCustom04" name="papan_nama" value="{{$x->papan_nama}}">
-      <option selected disabled value="">PAPAN NAMA TOWER</option>
         <option>Yes</option>
         <option>No</option>
     </select>
@@ -70,14 +70,15 @@
     <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="hp_petugas" value="{{$x->hp_petugas}}">
   </div>
   <div class="form-group col-md-2">
+  <label selected disabled value="">SHELTER DAN GENSET</label>
   <select class="custom-select" id="validationCustom04" name="shelter_genset" value="{{$x->shelter_genset}}">
-      <option selected disabled value="">SHELTER DAN GENSET</option>
         <option>Yes</option>
         <option>No</option>
     </select>
   </div>
   <div class="form-group col-md-3">
     <label for="exampleFormControlFile1"> file input</label>
+    <img src=" {{asset( 'storage/'. $x->gambar) }}" alt="" height="123px">
     <input type="file" class="form-control-file" id="exampleFormControlFile1" name="gambar">
   </div>
   @endforeach

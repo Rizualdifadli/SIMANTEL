@@ -28,7 +28,7 @@
     <tr>
         <td><?php echo e($x->tower_id); ?> </td>
         <td><?php echo e($x->kode_kecamatan); ?></td>
-        <td><?php echo e($x->desa); ?> </p></td>
+        <td><?php echo e($x->desa); ?></p><a href="/foto">lihat gambar</a></td>
         <td><?php echo e($x->koordinat); ?></td>
         <td><?php echo e($x->ketinggian_meter); ?></td>
         <td><?php echo e($x->pemilik_tanah); ?></td>
@@ -39,7 +39,7 @@
         <td><?php echo e($x->petugas); ?></td>
         <td><?php echo e($x->hp_petugas); ?></td>
         <td><?php echo e($x->shelter_genset); ?></td>
-        <td><?php echo e($x->gambar); ?></td>
+        <td></td>
     </tr>
     <td>
           <a href="<?php echo e($x->tower_id); ?>/edit" class="badge badge-success"><i class="far fa-edit"></i></a>

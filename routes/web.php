@@ -62,5 +62,7 @@ Route::get('/edit/{tower}', 'EditController@show');
 Route::post('/edit','EditController@update');
 Route::post('/kecamatanmersam_admin', 'EditController@store');
 Route::delete('/kecamatanmersam_admin/{tower_id}', 'EditController@destroy');
+Route::get('/foto', 'PagesController@gambar');
+
 
 // Route::resource('edit','EditController');

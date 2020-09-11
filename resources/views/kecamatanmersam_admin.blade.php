@@ -28,7 +28,7 @@
     <tr>
         <td>{{$x->tower_id}} </td>
         <td>{{$x->kode_kecamatan}}</td>
-        <td>{{$x->desa}} </p></td>
+        <td>{{$x->desa}}</p><a href="/foto">lihat gambar</a></td>
         <td>{{$x->koordinat}}</td>
         <td>{{$x->ketinggian_meter}}</td>
         <td>{{$x->pemilik_tanah}}</td>
@@ -39,7 +39,7 @@
         <td>{{$x->petugas}}</td>
         <td>{{$x->hp_petugas}}</td>
         <td>{{$x->shelter_genset}}</td>
-        <td>{{$x->gambar}}</td>
+        <td></td>
     </tr>
     <td>
           <a href="{{$x->tower_id}}/edit" class="badge badge-success"><i class="far fa-edit"></i></a>
