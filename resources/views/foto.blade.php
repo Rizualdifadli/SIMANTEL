@@ -8,11 +8,27 @@
 @foreach($data as $x)
 <h3 class="text-center">FOTO TOWER {{$x->tower_id}}</h3>
     @csrf
-    
-  <div class="form-group rounded mx-auto d-block">
-    <img src=" {{asset( 'storage/'. $x->gambar) }}" class="rounded mx-auto d-block" alt="foto_tower">
-    <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis perferendis vitae dolor saepe unde suscipit ex eius obcaecati animi quam labore quas eos soluta, veritatis rerum quo in odio vero!</h3>
+    <div id="carouselExampleFade" class="carousel slide carousel-fade" data-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src=" {{asset( 'storage/'. $x->gambar) }}" class="d-block w-100" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="" class="d-block w-100" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="..." class="d-block w-100" alt="...">
+    </div>
   </div>
+  <a class="carousel-control-prev" href="#carouselExampleFade" role="button" data-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="carousel-control-next" href="#carouselExampleFade" role="button" data-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>
   @endforeach
-
+ 
 @endsection

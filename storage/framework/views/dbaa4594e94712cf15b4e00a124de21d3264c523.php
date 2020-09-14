@@ -10,6 +10,11 @@
                   <?php if (app(\Illuminate\Contracts\Auth\Access\Gate::class)->check('register-users')): ?>
                       <a href="<?php echo e(route('register')); ?>"><button type="button" class="btn btn-primary float-left">Register new user</button></a>
                   <?php endif; ?>
+                  <form action="<?php echo e(route('admin.changePassword')); ?>"method="POST" class="float-right">
+                    <?php echo csrf_field(); ?>
+                    <button type="submit" class="btn btn-warning">Ganti Password</button>
+                  </form>
+
 <table class="table">
   <thead>
     <tr>
