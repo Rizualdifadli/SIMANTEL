@@ -9,7 +9,8 @@
 <table class="table table-bordered col-md-12" id="search">
   <thead class="thead-dark" >
       <th scope="col">TOWER</th>
-      <th scope="col">DESA</th>
+      <th scope="col">ALAMAT</th>
+      <th scope="col">PERUSAHAAN</th>
       <th scope="col">KOORDINAT</th>
       <th scope="col">KETINGGIAN</th>
       <th scope="col">PEMILIK TANAH</th>
@@ -25,8 +26,9 @@
   @foreach ($data as $x)
   <tr>
       <td>{{$x->tower_id}}</td>
-      <td>{{$x->desa}} </p></td>
-      <td>{{$x->desa}}</p><a href="{{$x->tower_id}}/foto">lihat gambar</a></td>
+      <td>{{$x->desa}}</td>
+      <td>{{$x->pemilik_tower}}</td>
+      <td>{{$x->koordinat}}<p><a href="{{$x->tower_id}}/foto">lihat gambar</a></p></td>
       <td>{{$x->ketinggian_meter}}</td>
       <td>{{$x->pemilik_tanah}}</td>
       <td>{{$x->izin_tower}}</td>

@@ -29,14 +29,15 @@ group by a.kode_kecamatan');
 		$kode_kecamatan = $r->kode_kecamatan;
         $region = DB::table('region')
                     ->where('kode_kecamatan',$kode_kecamatan)->first();
-		$data = DB::table('tower')
-				->where('kode_kecamatan', $kode_kecamatan)->get();
-        $provider = DB::table('provider')->get();
-		return view('tower_kecamatan', compact('region','data','provider'));
+		$data = DB::select('select tower.*, perusahaan.*
+            from `tower`
+            left join perusahaan
+            on tower.tower_id = perusahaan.tower_id');
+		return view('tower_kecamatan', compact('region','data'));
 	}
 	public function kecamatanmersam_admin(Request $data){
 
-    
+
     //return view ('kecamatanmersam_admin',compact('data'));
 }
     // guest
