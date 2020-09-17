@@ -26,9 +26,15 @@
   @foreach ($data as $x)
   <tr>
       <td>{{$x->tower_id}}</td>
+<<<<<<< HEAD
       <td>{{$x->desa}} </p></td>
       <td>{{$x->pemilik_tower}} </p></td>
       <td>{{$x->koordinat}}</p><a href="{{$x->tower_id}}/foto">lihat gambar</a></td>
+=======
+      <td>{{$x->desa}}</td>
+      <td>{{$x->pemilik_tower}}</td>
+      <td>{{$x->koordinat}}<p><a href="{{$x->tower_id}}/foto">lihat gambar</a></p></td>
+>>>>>>> b9591a659bcab04d7acef037c3e6cfcbdfa47797
       <td>{{$x->ketinggian_meter}}</td>
       <td>{{$x->pemilik_tanah}}</td>
       <td>{{$x->izin_tower}}</td>
