@@ -1,9 +1,9 @@
-@extends ('layouts.app')
+@extends ('layout.main')
 
 @section('title' , 'Form Edit')
 
 @section('content')
-<link rel="stylesheet" href="/css/gambar.css">
+<link rel="stylesheet" href="css/gambar.css">
 <div class="jumbotron">
 @foreach($data as $x)
 <h3 class="text-center">FOTO TOWER {{$x->tower_id}}</h3>
@@ -11,7 +11,7 @@
     <div id="carouselExampleFade" class="carousel slide carousel-fade" data-ride="carousel">
   <div class="carousel-inner">
     <div class="carousel-item active">
-      <img src=" {{asset( 'storage/'. $x->gambar) }}" class="d-block w-100" alt="...">
+       3ewwww<img src=" {{asset( 'storage/'. $x->gambar) }}" class="d-block w-100" alt=>
     </div>
     <div class="carousel-item">
       <img src="" class="d-block w-100" alt="...">
@@ -30,5 +30,4 @@
   </a>
 </div>
   @endforeach
- 
 @endsection

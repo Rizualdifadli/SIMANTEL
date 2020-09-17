@@ -35,6 +35,7 @@ Route:: get('/kecamatan_maroseboulu', 'PagesController@kecamatan_maroseboulu');
 Route:: get('/kecamatan_maroseboilir', 'PagesController@kecamatan_maroseboilir');
 Route:: get('/kecamatan_bajubang', 'PagesController@kecamatan_bajubang');*/
 Route::get('{tower_id}/foto', 'PagesController@gambar');
+Route::get('{tower_id}/fotoadmin', 'PagesController@gambaradmin');
 
 // guest
 

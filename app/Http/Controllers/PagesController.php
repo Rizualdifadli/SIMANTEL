@@ -59,5 +59,12 @@ group by a.kode_kecamatan');
         ->get();
           return view('/foto', compact('data','tower_id'));
     }
+    public function gambaradmin(Request $r){
+        $tower_id=$r->tower_id;
+        $data=DB::table('tower')
+        ->where('tower_id',$tower_id)
+        ->get();
+          return view('/fotoadmin', compact('data','tower_id'));
+    }
 
 }
