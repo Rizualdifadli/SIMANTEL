@@ -28,7 +28,7 @@
     <tr>
         <td><?php echo e($x->tower_id); ?> </td>
         <td><?php echo e($x->kode_kecamatan); ?></td>
-        <td><?php echo e($x->desa); ?></p><a href="/foto">lihat gambar</a></td>
+        <td><?php echo e($x->desa); ?></p><a href="<?php echo e($x->tower_id); ?>/fotoadmin">lihat gambar</a></td>
         <td><?php echo e($x->koordinat); ?></td>
         <td><?php echo e($x->ketinggian_meter); ?></td>
         <td><?php echo e($x->pemilik_tanah); ?></td>

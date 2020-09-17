@@ -30,13 +30,14 @@ group by a.kode_kecamatan');
         $region = DB::table('region')
                     ->where('kode_kecamatan',$kode_kecamatan)->first();
 		$data = DB::table('tower')
+        ->leftJoin("perusahaan","perusahaan.tower_id","=","tower.tower_id")
+        ->select('tower.*','perusahaan.*')
 				->where('kode_kecamatan', $kode_kecamatan)->get();
-        $provider = DB::table('provider')->get();
-		return view('tower_kecamatan', compact('region','data','provider'));
+		return view('tower_kecamatan', compact('region','data'));
 	}
 	public function kecamatanmersam_admin(Request $data){
 
-    
+
     //return view ('kecamatanmersam_admin',compact('data'));
 }
     // guest
