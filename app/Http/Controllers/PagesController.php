@@ -37,6 +37,14 @@ from tower as a, region as b where a.kode_kecamatan  = b.kode_kecamatan');
 				->where('kode_kecamatan', $kode_kecamatan)->get();
 		return view('tower_kecamatan', compact('region','data'));
 	}
+
+  public function tower_global(){
+		$data = DB::table('tower')
+        ->leftJoin("perusahaan","perusahaan.tower_id","=","tower.tower_id")
+        ->select('tower.*','perusahaan.*')
+				->get();
+		return view('tower_global', compact('data'));
+	}
 	public function kecamatanmersam_admin(Request $data){
 
 

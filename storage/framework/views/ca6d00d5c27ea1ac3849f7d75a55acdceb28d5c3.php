@@ -26,15 +26,9 @@
   <?php $__currentLoopData = $data; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $x): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
   <tr>
       <td><?php echo e($x->tower_id); ?></td>
-<<<<<<< HEAD
-      <td><?php echo e($x->desa); ?> </p></td>
-      <td><?php echo e($x->pemilik_tower); ?> </p></td>
-      <td><?php echo e($x->koordinat); ?></p><a href="<?php echo e($x->tower_id); ?>/foto">lihat gambar</a></td>
-=======
       <td><?php echo e($x->desa); ?></td>
       <td><?php echo e($x->pemilik_tower); ?></td>
       <td><?php echo e($x->koordinat); ?><p><a href="<?php echo e($x->tower_id); ?>/foto">lihat gambar</a></p></td>
->>>>>>> b9591a659bcab04d7acef037c3e6cfcbdfa47797
       <td><?php echo e($x->ketinggian_meter); ?></td>
       <td><?php echo e($x->pemilik_tanah); ?></td>
       <td><?php echo e($x->izin_tower); ?></td>

@@ -24,7 +24,7 @@
        <div class="card-body-icon"><i class="fas fa-broadcast-tower"></i></div>
       <h5 class="card-title">Total Tower</h5>
       <div class="display-4">{{$g->jumlah_tower}}</div>
-      <a href="{{url('tower_kecamatan')}}"><p class="card-text text-white">lihat detail<i class="fas fa-angle-double-right ml-2"></p></i></a>
+      <a href="{{url('tower_global')}}"><p class="card-text text-white">lihat detail<i class="fas fa-angle-double-right ml-2"></p></i></a>
       </div>
     </div>
     @endforeach

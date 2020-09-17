@@ -26,6 +26,7 @@ Route:: get('/login', 'PagesController@login');
 Route:: get('/simantel', 'PagesController@simantel');
 // guest
 Route:: get('/tower_kecamatan', 'PagesController@tower_kecamatan');
+Route:: get('/tower_global', 'PagesController@tower_global');
 /*Route:: get('/kecamatan_mersam', 'PagesController@kecamatan_mersam');
 Route:: get('/kecamatan_tembesi', 'PagesController@kecamatan_tembesi');
 Route:: get('/kecamatan_muarabulian', 'PagesController@kecamatan_muarabulian');
