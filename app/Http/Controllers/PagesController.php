@@ -22,14 +22,17 @@ class PagesController extends Controller
         $region = DB::select('select b.kode_kecamatan, b.kecamatan, count(a.tower_id) as jumlah_tower
 from tower as a, region as b where a.kode_kecamatan  = b.kode_kecamatan
 group by a.kode_kecamatan');
-        return view ('simantel',compact('region'));
+        $globalregion = DB::select('select b.kode_kecamatan, b.kecamatan, count(a.tower_id) as jumlah_tower
+from tower as a, region as b where a.kode_kecamatan  = b.kode_kecamatan');
+        return view ('simantel',compact('region','globalregion'));
     }
 
 	public function tower_kecamatan(Request $r){
 		$kode_kecamatan = $r->kode_kecamatan;
         $region = DB::table('region')
                     ->where('kode_kecamatan',$kode_kecamatan)->first();
-		$data = DB::select('select tower.*, perusahaan.*
+		$data = DB::select(
+            'select tower.*, perusahaan.*
             from `tower`
             left join perusahaan
             on tower.tower_id = perusahaan.tower_id');
