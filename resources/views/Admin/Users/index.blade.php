@@ -10,7 +10,7 @@
                   @can('register-users')
                       <a href="{{ route('register') }}"><button type="button" class="btn btn-primary float-left">Register new user</button></a>
                   @endcan
-                  <form action="{{route('admin.changePassword')}}"method="POST" class="float-right">
+                  <form action="auth/passwords/reset"method="POST" class="float-right">
                     @csrf
                     <button type="submit" class="btn btn-warning">Ganti Password</button>
                   </form>
