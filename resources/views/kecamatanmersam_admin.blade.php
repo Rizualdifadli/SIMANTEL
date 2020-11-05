@@ -31,8 +31,11 @@
         <td>{{$x->desa}}</p><a href="{{$x->tower_id}}/fotoadmin">lihat gambar</a></td>
         <td>{{$x->koordinat}}</td>
         <td>{{$x->ketinggian_meter}}</td>
-        <td>{{$x->pemilik_tanah}}</td>
-        <td>{{$x->izin_tower}}</td>
+        <td>{{$x->pemilik_tanah}}</td>        
+        <td>{{$x->izin_tower}}<p>{{$x->tenggat_izin}}</p>
+        @if($diff2 < 31)
+        <p>Izin sudah mau habis!</p>
+       @endif
         <td>{{$x->listrik}}</td>
         <td>{{$x->pagar_tower}}</td>
         <td>{{$x->papan_nama}}</td>

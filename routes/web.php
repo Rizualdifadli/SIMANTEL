@@ -38,6 +38,9 @@ Route:: get('/kecamatan_bajubang', 'PagesController@kecamatan_bajubang');*/
 Route::get('{tower_id}/foto', 'PagesController@gambar');
 Route::get('{tower_id}/fotoadmin', 'PagesController@gambaradmin');
 
+//Route:: get('/tagihanall', 'PagesController@tagihanall');
+//Route:: get('/tagihandash', 'PagesController@tagihandash');
+
 // guest
 
 // admin

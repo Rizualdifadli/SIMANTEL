@@ -18,7 +18,7 @@
     <header>SIMANTEL</header>
       <ul>
         <li><a href="<?php echo e(url('/')); ?>"><i class="fas fa-qrcode"></i>Dashboard</a></li>
-        <li><a href="<?php echo e(url('/simantel')); ?>"><i class="fas fa-calendar-week"></i>Perusahaan</a></li>
+        <li><a href="<?php echo e(url('tagihan')); ?>"><i class="fas fa-calendar-week"></i>Status Perizinan</a></li>
         <li><a href="#"><i class="far fa-question-circle"></i>Pemilik Tower</a></li>
         <li><a href="#"><i class="fas fa-sliders-h"></i>Services</a></li>
         <li><a href="#"><i class="far fa-envelope"></i>Contact</a></li>

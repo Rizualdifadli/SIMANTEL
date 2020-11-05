@@ -53,6 +53,10 @@
         <option>Yes</option>
         <option>No</option>
       </select>
+      <label for="exampleInputPassword1">TENGGAT IZIN</label>
+      <input type="date" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="tenggat_izin">
+      <label for="exampleInputPassword1">BILL UNPAID</label>
+      <input type="number" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="bill">
   </div>
   <div class="form-group col-md-2">
   <select class="custom-select" id="validationCustom04" name="listrik">

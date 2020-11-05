@@ -8,6 +8,7 @@ use Gate;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Storage;
+use Carbon\Carbon;
 
 class PagesController extends Controller
 {
@@ -34,8 +35,24 @@ from tower as a, region as b where a.kode_kecamatan  = b.kode_kecamatan');
 		$data = DB::table('tower')
         ->leftJoin("perusahaan","perusahaan.tower_id","=","tower.tower_id")
         ->select('tower.*','perusahaan.*')
-				->where('kode_kecamatan', $kode_kecamatan)->get();
-		return view('tower_kecamatan', compact('region','data'));
+                ->where('kode_kecamatan', $kode_kecamatan)->get();
+
+        $rows = DB::table('tower')->select('tower.tenggat_izin')->get();
+        $tenggat = $rows[0]; 
+        $diff = Carbon::now()->diff(Carbon::parse($tenggat->tenggat_izin));
+        $diff2 = Carbon::parse($tenggat->tenggat_izin)->diff(Carbon::now());
+
+        /**$tenggat = DB::table('tower')
+        ->select('tower.tenggat_izin')->get();
+
+        $now = Carbon::now();
+
+        foreach ($tenggat as $tenggat2){
+            $deadline = Carbon::parse($tenggat2);
+            $diff = $deadline->diffInDays($now);
+        }**/
+    
+		return view('tower_kecamatan', compact('region','data','diff2'));
 	}
 
   public function tower_global(){
@@ -46,9 +63,12 @@ from tower as a, region as b where a.kode_kecamatan  = b.kode_kecamatan');
 		return view('tower_global', compact('data'));
 	}
 	public function kecamatanmersam_admin(Request $data){
+        $rows = DB::table('tower')->select('tower.tenggat_izin')->get();
+        $tenggat = $rows[0]; 
+        $diff = Carbon::now()->diff(Carbon::parse($tenggat->tenggat_izin))->d;
+        $diff2 = Carbon::parse($tenggat->tenggat_izin)->diff(Carbon::now())->d;
 
-
-    //return view ('kecamatanmersam_admin',compact('data'));
+    return view ('kecamatanmersam_admin',compact('diff2'));
 }
     // guest
     // akhir Guest
@@ -77,5 +97,18 @@ from tower as a, region as b where a.kode_kecamatan  = b.kode_kecamatan');
         ->get();
           return view('/fotoadmin', compact('data','tower_id'));
     }
+    /**public function tagihanall(Request $r){
+        $data=DB::table('tenggat_izin')
+        ->get();
+        return view ('/tagihanall',compact('data'));
+    }
+    public function tagihandash(Request $r){
+        $data=DB::table('tenggat_izin')
+        ->get();
+        return view ('/tagihandash',compact('data'));
+    }
 
+    public function tagihandashboard(Request $r){
+        
+    }**/
 }

@@ -31,7 +31,11 @@
       <td><?php echo e($x->koordinat); ?><p><a href="<?php echo e($x->tower_id); ?>/foto">lihat gambar</a></p></td>
       <td><?php echo e($x->ketinggian_meter); ?></td>
       <td><?php echo e($x->pemilik_tanah); ?></td>
-      <td><?php echo e($x->izin_tower); ?></td>
+      <td><?php echo e($x->izin_tower); ?><p><?php echo e($x->tenggat_izin); ?></p>
+      <?php if($diff2 < 31): ?>
+      <p>Izin sudah mau habis!</p>
+      <?php endif; ?>
+      </td>
       <td><?php echo e($x->listrik); ?></td>
       <td><?php echo e($x->pagar_tower); ?></td>
       <td><?php echo e($x->papan_nama); ?></td>

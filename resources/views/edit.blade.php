@@ -34,11 +34,12 @@
     <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="pemilik_tanah" value="{{$x->pemilik_tanah}}">
   </div>
   <div class="form-group col-md-2">
-    <label for="exampleInputPassword1">PEMILIK TANAH</label>
-    <select class="custom-select" id="validationCustom04" name="izin_tower"  value="{{$x->izin_tower}}" >
-        <option>Yes</option>
-        <option>No</option>
-      </select>
+    <label for="exampleInputPassword1">IZIN TOWER</label>
+    <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="izin_tower" value="{{$x->izin_tower}}">
+      <label for="exampleInputPassword1">TENGGAT IZIN</label>
+      <input type="date" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="tenggat_izin" value="{{$x->tenggat_izin}}">
+      <label for="exampleInputPassword1">BILL UNPAID</label>
+      <input type="number" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="bill" value="{{$x->bill}}">
   </div>
   <div class="form-group col-md-2">
   <label selected disabled value="">LISTRIK</label>
