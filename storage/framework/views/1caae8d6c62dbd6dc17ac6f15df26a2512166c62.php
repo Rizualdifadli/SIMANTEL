@@ -15,14 +15,15 @@
       <th scope="col">KETINGGIAN</th>
       <th scope="col">PEMILIK TANAH</th>
       <th scope="col">IZIN TOWER</th>
+      <th scope="col">TENGGAT IZIN</th>
+      <th scope="col">SHELTER DAN GENSET</th>
       <th scope="col">LISTRIK</th>
       <th scope="col">PAGAR TOWER</th>
       <th scope="col">PAPAN NAMA TOWER</th>
       <th scope="col">PETUGAS</th>
       <th scope="col">HP PETUGAS</th>
-      <th scope="col">SHELTER DAN GENSET</th>
     </thead>
-
+  
   <?php $__currentLoopData = $data; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $x): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
   <tr>
       <td><?php echo e($x->tower_id); ?></td>
@@ -31,17 +32,19 @@
       <td><?php echo e($x->koordinat); ?><p><a href="<?php echo e($x->tower_id); ?>/foto">lihat gambar</a></p></td>
       <td><?php echo e($x->ketinggian_meter); ?></td>
       <td><?php echo e($x->pemilik_tanah); ?></td>
-      <td><?php echo e($x->izin_tower); ?><p><?php echo e($x->tenggat_izin); ?></p>
-      <?php if($diff2 < 31): ?>
-      <p>Izin sudah mau habis!</p>
+      <td><?php echo e($x->izin_tower); ?></td>  
+      <td><?php echo e($x->tenggat_izin); ?>
+
+      <?php if($x->diff < 31 and $x->diff!=0): ?>
+         <p class="text-warning">Izin sudah mau habis!</p>
       <?php endif; ?>
-      </td>
+      </td>  
+      <td><?php echo e($x->shelter_genset); ?></td>  
       <td><?php echo e($x->listrik); ?></td>
       <td><?php echo e($x->pagar_tower); ?></td>
       <td><?php echo e($x->papan_nama); ?></td>
       <td><?php echo e($x->petugas); ?></td>
       <td><?php echo e($x->hp_petugas); ?></td>
-      <td><?php echo e($x->shelter_genset); ?></td>
   </tr>
   <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
 <?php $__env->stopSection(); ?>
