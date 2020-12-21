@@ -37,22 +37,21 @@ from tower as a, region as b where a.kode_kecamatan  = b.kode_kecamatan');
         ->select('tower.*','perusahaan.*')
                 ->where('kode_kecamatan', $kode_kecamatan)->get();
 
-        $rows = DB::table('tower')->select('tower.tenggat_izin')->get();
-        $tenggat = $rows[0]; 
-        $diff = Carbon::now()->diff(Carbon::parse($tenggat->tenggat_izin));
-        $diff2 = Carbon::parse($tenggat->tenggat_izin)->diff(Carbon::now());
-
         /**$tenggat = DB::table('tower')
-        ->select('tower.tenggat_izin')->get();
+        ->select('tower.tenggat_izin')
+        ->where('kode_kecamatan',$kode_kecamatan)
+        ->get();
 
-        $now = Carbon::now();
+        foreach($tenggat as $y){
+            $due=Carbon::parse($y->tenggat_izin);
+            $diff[] = Carbon::parse(Carbon::now())->diffInDays($due);
+        }
 
-        foreach ($tenggat as $tenggat2){
-            $deadline = Carbon::parse($tenggat2);
-            $diff = $deadline->diffInDays($now);
-        }**/
+        $interval = json_decode(json_encode($diff), FALSE);
+
+        $data->selisih=$interval;**/
     
-		return view('tower_kecamatan', compact('region','data','diff2'));
+    return view('tower_kecamatan', compact('region','data'));
 	}
 
   public function tower_global(){
@@ -63,12 +62,7 @@ from tower as a, region as b where a.kode_kecamatan  = b.kode_kecamatan');
 		return view('tower_global', compact('data'));
 	}
 	public function kecamatanmersam_admin(Request $data){
-        $rows = DB::table('tower')->select('tower.tenggat_izin')->get();
-        $tenggat = $rows[0]; 
-        $diff = Carbon::now()->diff(Carbon::parse($tenggat->tenggat_izin))->d;
-        $diff2 = Carbon::parse($tenggat->tenggat_izin)->diff(Carbon::now())->d;
-
-    return view ('kecamatanmersam_admin',compact('diff2'));
+ 
 }
     // guest
     // akhir Guest
