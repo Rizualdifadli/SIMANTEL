@@ -15,7 +15,6 @@
       <th scope="col">KETINGGIAN</th>
       <th scope="col">PEMILIK TANAH</th>
       <th scope="col">IZIN TOWER</th>
-      <th scope="col">TENGGAT IZIN</th>
       <th scope="col">LISTRIK</th>
       <th scope="col">PAGAR TOWER</th>
       <th scope="col">PAPAN NAMA TOWER</th>
@@ -32,13 +31,11 @@
         <td>{{$x->desa}}</p><a href="{{$x->tower_id}}/fotoadmin">lihat gambar</a></td>
         <td>{{$x->koordinat}}</td>
         <td>{{$x->ketinggian_meter}}</td>
-        <td>{{$x->pemilik_tanah}}</td>
-        <td>{{$x->izin_tower}}</td>
-        <td>{{$x->tenggat_izin}}
-        @if ($x->diff < 31 and $x->diff!=0)
-         <p class="text-warning">Izin sudah mau habis!</p>
-        @endif
-        </td>
+        <td>{{$x->pemilik_tanah}}</td>        
+        <td>{{$x->izin_tower}}<p>{{$x->tenggat_izin}}</p>
+        @if($diff2 < 31)
+        <p>Izin sudah mau habis!</p>
+       @endif
         <td>{{$x->listrik}}</td>
         <td>{{$x->pagar_tower}}</td>
         <td>{{$x->papan_nama}}</td>

@@ -802,6 +802,7 @@ ALTER TABLE `role_user`
 -- Indexes for table `tower`
 --
 ALTER TABLE `tower`
+  ADD PRIMARY KEY (`tower_id`),
   ADD KEY `FK_Kecamatan` (`kode_kecamatan`);
 
 --
@@ -871,7 +872,8 @@ ALTER TABLE `provider`
 -- Constraints for table `tower`
 --
 ALTER TABLE `tower`
-  ADD CONSTRAINT `FK_Kecamatan` FOREIGN KEY (`kode_kecamatan`) REFERENCES `region` (`kode_kecamatan`);
+  ADD CONSTRAINT `FK_Kecamatan` FOREIGN KEY (`kode_kecamatan`) REFERENCES `region` (`kode_kecamatan`) ON DELETE CASCADE ON UPDATE CASCADE;
+COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;

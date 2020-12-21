@@ -8,7 +8,6 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\DB;
 use Gate;
 use Storage;
-use Carbon\Carbon;
 
 
 
@@ -110,7 +109,7 @@ class EditController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function store(Request $request)
-    {   
+    {
         DB::table('tower')->insert(
             array(
                 'tower_id'=> $request->tower_id,
@@ -125,24 +124,10 @@ class EditController extends Controller
                 'hp_petugas' => $request->hp_petugas,
                 'shelter_genset' => $request->shelter_genset,
                 'tenggat_izin' => $request->tenggat_izin,
-                'bill' => $request->bill,
+                'bill' => $request->bill
                 )
         );
-
-        $tenggat = DB::table('tower')
-        ->select('tower.tenggat_izin')
-        ->where('tower_id',$request->tower_id)
-        ->first();
-
-        $due    =Carbon::parse($tenggat->tenggat_izin);
-        $diff   =Carbon::parse(Carbon::now())->diffInDays($due);
-
-       DB::table('tower')->insert(
-           array(
-               'diff'=>$diff
-           )
-        );
-
+       
         return redirect('/kecamatanmersam_admin')->with('status','data berhasil di update');
     }
 
@@ -184,7 +169,6 @@ class EditController extends Controller
         if($request->gambar){
             Storage::delete($request->gambar);
         }
-
         DB::table('tower')
         ->where('tower_id', $request->tower_id)
         ->update([
@@ -204,21 +188,6 @@ class EditController extends Controller
                     'bill' => $request->bill,
                     //'gambar'=>$request->file('gambar')->store('gambars')
                 ]);
-
-            $tenggat = DB::table('tower')
-            ->select('tower.tenggat_izin')
-            ->where('tower_id',$request->tower_id)
-            ->first();
-        
-            $due    =Carbon::parse($tenggat->tenggat_izin);
-            $diff   =Carbon::parse(Carbon::now())->diffInDays($due);
-        
-            DB::table('tower')
-            ->where('tower_id', $request->tower_id)
-            ->update([
-                    'diff'=>$diff
-            ]);
-
         return redirect('/kecamatanmersam_admin')->with('status','data berhasil di update');
     }
 
